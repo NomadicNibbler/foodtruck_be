@@ -204,34 +204,30 @@
           null
         ]
       },
+      "/Users/thomasnieuwenhuis/Desktop/Documents/Turing Docs/mod_4/iscream_truck/foodtruck_be/spec/factories/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/thomasnieuwenhuis/Desktop/Documents/Turing Docs/mod_4/iscream_truck/foodtruck_be/config/routes.rb": {
         "lines": [
           1,
           null,
           null
         ]
-      },
-      "/Users/thomasnieuwenhuis/Desktop/Documents/Turing Docs/mod_4/iscream_truck/foodtruck_be/app/models/user.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/thomasnieuwenhuis/Desktop/Documents/Turing Docs/mod_4/iscream_truck/foodtruck_be/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1620926480
+    "timestamp": 1620946356
   }
 }
