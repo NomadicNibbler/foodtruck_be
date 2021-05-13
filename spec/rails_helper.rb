@@ -74,9 +74,16 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+<<<<<<< HEAD
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
   config.filter_sensitive_data('<COORD_KEY>') { ENV['COORD_KEY'] }
 end
+||||||| parent of 8cbb616... add food truck service tests
+=======
+def parse(response)
+  JSON.parse(response.body, symbolize_names: true)
+end
+>>>>>>> 8cbb616... add food truck service tests
