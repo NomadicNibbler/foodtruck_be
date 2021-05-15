@@ -238,13 +238,18 @@
           1,
           null,
           1,
+          8,
+          8,
           1,
           null,
+          7,
+          null,
+          null,
           null,
           1,
           null,
           1,
-          1,
+          8,
           null,
           null,
           null
@@ -275,8 +280,40 @@
           1,
           null
         ]
+      },
+      "/Users/thomasnieuwenhuis/Desktop/Documents/Turing Docs/mod_4/iscream_truck/foodtruck_be/app/serializers/user_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1620948649
+    "timestamp": 1621098177
   }
 }
