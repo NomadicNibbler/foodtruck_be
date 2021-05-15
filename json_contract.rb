@@ -14,7 +14,25 @@ params: { "first": "name", "last": "name" }
       "first_name": "Beep",
       "last_name": "Beeperson",
       "lat": "45.84858",
-      "long": "69.37472"
+      "long": "69.37472",
+      "trucks": [
+        {
+          "id": "23",
+          "lat": "53.23657",
+          "long": "24.36676",
+          "name": "truck_1",
+          "distance": "2.4",
+          "logo_small": "logo"
+        },
+        {
+          "id": "2",
+          "lat": "67.23657",
+          "long": "28.36676",
+          "name": "truck_2",
+          "distance": "1.2",
+          "logo_small": "logo"
+        }
+      ]
     }
   }
 }
