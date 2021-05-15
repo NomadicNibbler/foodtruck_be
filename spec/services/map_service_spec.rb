@@ -14,4 +14,7 @@ RSpec.describe 'the map service' do
       end
     end
   end
+  describe 'sad path' do
+
+  end
 end
