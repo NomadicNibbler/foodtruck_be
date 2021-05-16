@@ -9,7 +9,7 @@ class TruckLite
   def initialize(data)
     @id = data[:id]
     @lat = data[:lat]
-    @lon = data[:lon]
+    @long = data[:long]
     @name = data[:name]
     @distance = 0
     @logo_small = data[:logo_small]
@@ -17,4 +17,5 @@ class TruckLite
 
   def add_distance(distance)
     @distance = distance
+  end 
 end

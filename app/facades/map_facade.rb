@@ -14,8 +14,8 @@ class MapFacade
   #
   # end
 
-  def self.get_coords(address)
-    MapService.address_to_lat_long(address)
+  def self.address_to_lat_long(address)
+    MapService.get_coords(address)
   end
 
   def self.regions

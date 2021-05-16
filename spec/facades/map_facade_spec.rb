@@ -25,7 +25,7 @@ RSpec.describe "map_facade_spec" do
       expect(lat_long).to eq('{lat: 123.12234, long: 1234.1234}')
     end
 
-    it "#find_closest_region" do
+    xit "#find_closest_region" do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       lat_long = MapFacade.address_to_lat_long(address)
       data = MapFacade.find_closest_region(lat_long)
@@ -34,7 +34,7 @@ RSpec.describe "map_facade_spec" do
       expect(region).to eq("Vancouver")
     end
 
-    it "when given lat_long it returns the closest region" do
+    xit "when given lat_long it returns the closest region" do
       lat_long = '{lat: 123.12234, long: 1234.1234}'
       region = MapFacade.get_region(lat_long)
 
