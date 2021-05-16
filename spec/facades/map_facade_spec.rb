@@ -18,16 +18,15 @@ RSpec.describe "map_facade_spec" do
       expect(trucks.first.logo_small).to eq("small_logo.png")
     end
 
-    it "#address_to_lat_long" do
+    it "#address_to_lat_long", :vcr do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       lat_long = MapFacade.address_to_lat_long(address)
-
-      expect(lat_long).to eq('{lat: 123.12234, long: 1234.1234}')
+      expect(lat_long).to eq({:lat=>49.2797, :lng=>-123.11556})
     end
 
-    xit "#find_closest_region" do
+    it "#find_closest_region", :vcr do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
-      lat_long = MapFacade.address_to_lat_long(address)
+      lat_long = {:lat=>49.2797, :lng=>-123.11556}
       data = MapFacade.find_closest_region(lat_long)
       region = parse(data)
 

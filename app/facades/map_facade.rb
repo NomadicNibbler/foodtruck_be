@@ -1,5 +1,5 @@
 class MapFacade
-  def self.get_trucks(address)
+  def self.get_trucks(address, radius)
     # valid_address = valid_address?(address)
     lat_long = address_to_lat_long(address)
     region = find_closest_region(lat_long)
@@ -19,7 +19,8 @@ class MapFacade
   end
 
   def self.regions
-    regions = FoodTruckService.get_regions
+    regions = parse(FoodTruckService.get_regions)
+
     regions.map do |region_data|
       Region.new(region_data)
     end
