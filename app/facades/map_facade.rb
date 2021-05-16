@@ -1,5 +1,5 @@
 class MapFacade
-  def self.get_trucks(address, radius)
+  def self.get_trucks(address) # + radius
     # valid_address = valid_address?(address)
     lat_long = address_to_lat_long(address)
     region = find_closest_region(lat_long)
@@ -28,17 +28,19 @@ class MapFacade
 
   def self.find_closest_region(user_location)
     regions.each do |region|
-      region.add_distance(MapService.get_distance(region.lat, region.lon, user_location))
+      region_loc = "#{region.lat},#{region.long}"
+      region.add_distance(DistanceService.get_distance(region_loc, user_location))
     end
-      ordered_regions = regions.order do |region|
-        region.distance
-      end
-      closest_region = ordered_regions[0]
+    ordered_regions = regions.order do |region|
+      region.distance
+    end
+    closest_region = ordered_regions[0]
   end
 
   def self.assign_distances(trucks, user_location)
     trucks.each do |truck|
-      truck.add_distance(MapService.get_distance(truck.lat, truck.lon, user_location))
+      truck_loc = "#{truck.lat},#{truck.long}"
+      truck.add_distance(DistanceService.get_distance(truck_loc, user_location))
     end
   end
 
