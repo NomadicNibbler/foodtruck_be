@@ -7,7 +7,14 @@ class DistanceService
       f.params['destinations'] = destination
       f.params['units'] = 'imperial'
     end
-    # parse(response)
+    # unpack and check for invalid query, currently returning a high number to not make invalid region nearest
+    data = parse(response)
+
+    if data[:rows].first[:elements].first[:status] == 'ZERO_RESULTS'
+      return 100000
+    else
+      data[:rows].first[:elements].first[:distance][:text].to_f
+    end
   end
 
   private

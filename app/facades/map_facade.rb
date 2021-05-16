@@ -27,10 +27,12 @@ class MapFacade
   end
 
   def self.find_closest_region(user_location)
-    regions.each do |region|
+    regions_with_distance = regions.map do |region|
       region_loc = "#{region.lat},#{region.long}"
-      region.add_distance(DistanceService.get_distance(region_loc, user_location))
+      user_loc   = "#{user_location[:lat]},#{user_location[:lng]}"
+      region.add_distance(DistanceService.get_distance(region_loc, user_loc))
     end
+    # calling regions method again loses distance data, now stored as regions_with_distance
     ordered_regions = regions.order do |region|
       region.distance
     end
