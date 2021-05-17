@@ -121,6 +121,8 @@ GEM
     puma (3.12.6)
     racc (1.5.2)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.6)
@@ -151,6 +153,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.2.5)
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rspec-core (3.10.1)
@@ -220,7 +223,9 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   pry
   puma (~> 3.11)
+  rack-cors
   rails (~> 5.2.5)
+  redis (~> 4.0)
   rspec-rails
   shoulda-matchers
   simplecov
