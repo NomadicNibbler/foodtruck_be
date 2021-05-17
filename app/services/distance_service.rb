@@ -9,11 +9,11 @@ class DistanceService
     end
     # unpack and check for invalid query, currently returning a high number to not make invalid region nearest
     data = parse(response)
-
-    if data[:rows].first[:elements].first[:status] == 'ZERO_RESULTS'
+    if data[:rows].first[:elements].first[:status] == 'ZERO_RESULTS' || data[:rows].first[:elements].first[:status] == 'NOT_FOUND'
       return 100000
     else
-      data[:rows].first[:elements].first[:distance][:text].to_f
+      distance_in_text = data[:rows].first[:elements].first[:distance][:text]
+      distance = ((distance_in_text.delete_suffix(' mi')).gsub(',', '')).to_f
     end
   end
 

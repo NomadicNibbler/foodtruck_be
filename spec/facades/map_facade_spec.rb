@@ -21,23 +21,41 @@ RSpec.describe "map_facade_spec" do
     it "#address_to_lat_long", :vcr do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       lat_long = MapFacade.address_to_lat_long(address)
-      expect(lat_long).to eq({:lat=>49.2797, :lng=>-123.11556})
+      expect(lat_long).to eq({:lat=>49.2797, :long=>-123.11556})
     end
 
     it "#find_closest_region", :vcr do
-      address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
-      lat_long = {:lat=>49.2797, :lng=>-123.11556}
+      lat_long = {:lat=>49.2797, :long=>-123.11556}
+      region = MapFacade.find_closest_region(lat_long)
+
+      expect(region).to eq("Vancouver")
+    end
+
+    xit "#make_trucks", :vcr do
+      truck_data =FoodTruckService.get_schedules_by_city('vancouver')
+      trucks = MapFacade.make_trucks(truck_data)
+      require "pry"; binding.pry
+      expect(trucks.first).to be_a(Truck)
+      expect(trucks.length).to eq(77)
+    end
+
+    xit "#regions", :vcr do
+      lat_long = {:lat=>49.2797, :long=>-123.11556}
       data = MapFacade.find_closest_region(lat_long)
       region = parse(data)
 
       expect(region).to eq("Vancouver")
     end
 
-    xit "when given lat_long it returns the closest region" do
-      lat_long = {lat: 123.12234, long: 1234.1234}
-      region = MapFacade.find_closest_region(lat_long)
 
-      expect(region).to eq('Vancouver')
+    xit "#assign_distances", :vcr do
+      user_location = {:lat=>49.2797, :long=>-123.11556}
+      truck_data =FoodTruckService.get_schedules_by_city('vancouver')
+      trucks = MapFacade.make_trucks(truck_data)
+      trucks_with_distances = MapFacade.assign_distances(trucks, user_location)
+
+      expect(trucks_with_distances.length).to eq(77)
+      expect(trucks_with_distances.first.distance).to eq("2.1 mi")
     end
   end
 
