@@ -6,7 +6,7 @@ class MapFacade
     truck_data = FoodTruckService.get_schedules_by_city(region)
     trucks = make_trucks(truck_data)
     trucks_with_distances = assign_distances(trucks, lat_long)
-    require "pry"; binding.pry
+    # require "pry"; binding.pry
     trucks_with_distances
   end
 
@@ -49,7 +49,8 @@ class MapFacade
         truck.add_distance(1000)
       else
         truck_loc = "#{truck.lat},#{truck.long}"
-        distance = DistanceService.get_distance(truck_loc, user_location)
+        user_loc   = "#{user_location[:lat]},#{user_location[:lng]}"
+        distance = DistanceService.get_distance(truck_loc, user_loc)
         truck.add_distance(distance)
       end
     end

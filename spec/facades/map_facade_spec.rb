@@ -5,10 +5,10 @@ RSpec.describe "map_facade_spec" do
     it "#get_trucks" do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       trucks = MapFacade.get_trucks(address)
-      require "pry"; binding.pry
+
       expect(trucks).to be_an(Array)
       expect(trucks.first).to be_a(TruckLite)
-      expect(trucks.count).to eq(45)
+      expect(trucks.count).to eq(96) #45
       expect(trucks.first.id).to eq(23)
       expect(trucks.first.latitude).to eq(53.23657)
       expect(trucks.first.longitude).to eq(24.36676)
