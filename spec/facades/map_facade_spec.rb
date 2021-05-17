@@ -5,8 +5,7 @@ RSpec.describe "map_facade_spec" do
     it "#get_trucks" do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       data = MapFacade.get_trucks(address)
-      trucks = parse(data)
-
+      require "pry"; binding.pry
       expect(trucks).to be_an(Array)
       expect(trucks.first).to be_a(Truck)
       expect(trucks.count).to eq(45)
@@ -18,13 +17,13 @@ RSpec.describe "map_facade_spec" do
       expect(trucks.first.logo_small).to eq("small_logo.png")
     end
 
-    it "#address_to_lat_long", :vcr do
+    xit "#address_to_lat_long", :vcr do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       lat_long = MapFacade.address_to_lat_long(address)
-      expect(lat_long).to eq({:lat=>49.2797, :long=>-123.11556})
+      expect(lat_long).to eq({:lat=>49.2797, :lng=>-123.11556})
     end
 
-    it "#find_closest_region", :vcr do
+    xit "#find_closest_region", :vcr do
       lat_long = {:lat=>49.2797, :long=>-123.11556}
       region = MapFacade.find_closest_region(lat_long)
 
@@ -33,29 +32,29 @@ RSpec.describe "map_facade_spec" do
 
     xit "#make_trucks", :vcr do
       truck_data =FoodTruckService.get_schedules_by_city('vancouver')
-      trucks = MapFacade.make_trucks(truck_data)
-      require "pry"; binding.pry
-      expect(trucks.first).to be_a(Truck)
-      expect(trucks.length).to eq(77)
+      trucks = MapFacade.make_trucks(truck_data[:vendors])
+      expect(trucks.first).to be_a(TruckLite)
+      expect(trucks.length).to eq(96)
     end
 
     xit "#regions", :vcr do
-      lat_long = {:lat=>49.2797, :long=>-123.11556}
-      data = MapFacade.find_closest_region(lat_long)
-      region = parse(data)
+      region_objects = MapFacade.regions
 
-      expect(region).to eq("Vancouver")
+      expect(region_objects).to be_an(Array)
+      expect(region_objects.count).to eq(77)
+      expect(region_objects.first.name).to eq("Abbotsford")
     end
 
 
     xit "#assign_distances", :vcr do
-      user_location = {:lat=>49.2797, :long=>-123.11556}
+      user_location = '49.2797,-123.11556'
       truck_data =FoodTruckService.get_schedules_by_city('vancouver')
-      trucks = MapFacade.make_trucks(truck_data)
+      trucks = MapFacade.make_trucks(truck_data[:vendors])
       trucks_with_distances = MapFacade.assign_distances(trucks, user_location)
 
-      expect(trucks_with_distances.length).to eq(77)
-      expect(trucks_with_distances.first.distance).to eq("2.1 mi")
+      expect(trucks_with_distances.length).to eq(96)
+      expect(trucks_with_distances.first.distance).to eq(0.8)
+      expect(trucks_with_distances.last.distance).to eq(4.8)
     end
   end
 

@@ -20,7 +20,10 @@ class DistanceService
   private
 
   def self.connection
-    connection = Faraday.new({ url: "https://maps.googleapis.com" })
+    connection = Faraday.new(url: "https://maps.googleapis.com", :ssl => {:verify => false} ) do |f|
+      f.use FaradayMiddleware::FollowRedirects, limit: 5
+      f.adapter Faraday.default_adapter
+    end
   end
 
   def self.parse(response)

@@ -4,7 +4,8 @@ class FoodTruckService
   end
 
   def self.get_schedules_by_city(region_identifier)
-    connection.get("/1.1/schedule/#{region_identifier}")
+    response = connection.get("/1.1/schedule/#{region_identifier}")
+    results = parse(response)[:vendors]
   end
 
   # def self.get_truck_info(truck_identifier)
@@ -15,7 +16,7 @@ class FoodTruckService
   private
 
   def self.connection
-    conn = Faraday.new({url: "http://data.streetfoodapp.com"}) do |f|
+    conn = Faraday.new(url: "http://data.streetfoodapp.com", :ssl => {:verify => false} ) do |f|
       f.use FaradayMiddleware::FollowRedirects, limit: 5
       f.adapter Faraday.default_adapter
     end
