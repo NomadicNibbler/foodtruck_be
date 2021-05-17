@@ -8,3 +8,8 @@ before_install:
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: JFofYrQt2hwYUFKBZrP8DTNW2xHqzfVv8w/ZKCZpzSLL5dcv+0mm/0T0zFLvoYrxuN+KqYZvJUe9IwmdOhvJ8I8bg9WH7VQ7TXpx4HQnyWu+knVz38Kp40NoQdMXSUiMvFB6ikS+dQXCJKknkuRQybgSDSzNXmRQeM4O6cYvvVbZYv0MBUprKkC532XX/ahzv3fTLi8ExmLjmjM68S1y8MFtkIZe5WCggF0IrepeDEh4PxSXZyZUbkhTagXRFcIZs0nbwd291yZPPFWP/xdjlkL1bQuXanMmLU+IEwhr/tE7xrmW3laB5+CORbFwLIcwL5dKm3e/U0ydrB9OR8N2DyMk7U0Qq4/yCt0ayoVVSfkbj+KbDHweZhe5B239drCCY3v8lLWCZOxmPxuWACScU47LwTVLuia19Wu7+ydfBB7Azo1a7kD1SKpgmVYHZ84FTLZ0fVadd77bOjl9BcdiC82DMYLMPCP3CLMdTfexAqYzw7FosvIexpvDolK5yxDgxWxUEC9X4DKvZyE9QzEl/rICSPa+c4HSGFQZIuQC76sSmFt2l0tmwnPRsthgNVdA/J7pJseI002GQDsiuOg7LkNHTZwh++aVveArKcMdviF7gZf+GI6b7rWxCb4qSrFaU4qVoRsqpA+K4RAO+DZLHjvfI5b8IQAmTEkTQ/SuOsc=
+  app: warm-scrubland-95764
