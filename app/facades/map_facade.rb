@@ -6,6 +6,7 @@ class MapFacade
     truck_data = FoodTruckService.get_schedules_by_city(region)
     trucks = make_trucks(truck_data)
     trucks_with_distances = assign_distances(trucks, lat_long)
+    require "pry"; binding.pry
     trucks_with_distances
   end
 
@@ -16,7 +17,7 @@ class MapFacade
   def self.find_closest_region(user_location)
     regions_with_distance = regions.each do |region|
       region_loc = "#{region.lat},#{region.long}"
-      user_loc   = "#{user_location[:lat]},#{user_location[:long]}"
+      user_loc   = "#{user_location[:lat]},#{user_location[:lng]}"
       distance = DistanceService.get_distance(region_loc, user_loc)
       region.add_distance(distance)
     end
