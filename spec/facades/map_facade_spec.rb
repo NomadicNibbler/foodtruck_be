@@ -2,10 +2,9 @@ require "rails_helper"
 
 RSpec.describe "map_facade_spec" do
   describe "class methods" do
-    it "#get_trucks" do
+    xit "#get_trucks" do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       data = MapFacade.get_trucks(address)
-      require "pry"; binding.pry
       expect(trucks).to be_an(Array)
       expect(trucks.first).to be_a(Truck)
       expect(trucks.count).to eq(45)
@@ -17,27 +16,27 @@ RSpec.describe "map_facade_spec" do
       expect(trucks.first.logo_small).to eq("small_logo.png")
     end
 
-    xit "#address_to_lat_long", :vcr do
+    it "#address_to_lat_long", :vcr do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       lat_long = MapFacade.address_to_lat_long(address)
       expect(lat_long).to eq({:lat=>49.2797, :lng=>-123.11556})
     end
 
-    xit "#find_closest_region", :vcr do
+    it "#find_closest_region", :vcr do
       lat_long = {:lat=>49.2797, :long=>-123.11556}
       region = MapFacade.find_closest_region(lat_long)
 
-      expect(region).to eq("Vancouver")
+      expect(region).to eq("vancouver")
     end
 
-    xit "#make_trucks", :vcr do
+    it "#make_trucks", :vcr do
       truck_data =FoodTruckService.get_schedules_by_city('vancouver')
-      trucks = MapFacade.make_trucks(truck_data[:vendors])
+      trucks = MapFacade.make_trucks(truck_data)
       expect(trucks.first).to be_a(TruckLite)
       expect(trucks.length).to eq(96)
     end
 
-    xit "#regions", :vcr do
+    it "#regions", :vcr do
       region_objects = MapFacade.regions
 
       expect(region_objects).to be_an(Array)
@@ -46,10 +45,10 @@ RSpec.describe "map_facade_spec" do
     end
 
 
-    xit "#assign_distances", :vcr do
+    it "#assign_distances", :vcr do
       user_location = '49.2797,-123.11556'
-      truck_data =FoodTruckService.get_schedules_by_city('vancouver')
-      trucks = MapFacade.make_trucks(truck_data[:vendors])
+      truck_data = FoodTruckService.get_schedules_by_city('vancouver')
+      trucks = MapFacade.make_trucks(truck_data)
       trucks_with_distances = MapFacade.assign_distances(trucks, user_location)
 
       expect(trucks_with_distances.length).to eq(96)

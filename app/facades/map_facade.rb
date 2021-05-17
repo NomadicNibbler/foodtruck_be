@@ -16,7 +16,7 @@ class MapFacade
   def self.find_closest_region(user_location)
     regions_with_distance = regions.each do |region|
       region_loc = "#{region.lat},#{region.long}"
-      user_loc   = "#{user_location[:lat]},#{user_location[:lng]}"
+      user_loc   = "#{user_location[:lat]},#{user_location[:long]}"
       distance = DistanceService.get_distance(region_loc, user_loc)
       region.add_distance(distance)
     end
@@ -48,8 +48,6 @@ class MapFacade
         truck.add_distance(1000)
       else
         truck_loc = "#{truck.lat},#{truck.long}"
-        user_loc   = "#{user_location[:lat]},#{user_location[:lng]}"
-        require "pry"; binding.pry
         distance = DistanceService.get_distance(truck_loc, user_location)
         truck.add_distance(distance)
       end
