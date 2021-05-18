@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<COORD_KEY>&location=1724%20hillcrest%20dr%20lander
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 18 May 2021 20:32:25 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1088'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Tue, 18 May 2021 20:32:25 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=1E25C297C7122579D81D1676035EB4BF; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"1724
+        hillcrest dr lander"},"locations":[{"street":"1724 Hillcrest Dr","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Lander","adminArea5Type":"City","adminArea4":"Fremont","adminArea4Type":"County","adminArea3":"WY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"82520-9775","geocodeQualityCode":"P1ABA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"R","linkId":"r47572859|p194470568|n64885584","unknownInput":"","type":"s","latLng":{"lat":42.81634,"lng":-108.738032},"displayLatLng":{"lat":42.816136,"lng":-108.737627},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=42.81634,-108.738032|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-345859944"}]}]}'
+  recorded_at: Tue, 18 May 2021 20:32:25 GMT
+recorded_with: VCR 6.0.0

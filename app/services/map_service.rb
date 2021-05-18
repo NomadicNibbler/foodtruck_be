@@ -9,7 +9,7 @@ class MapService
 
     data[:results][0][:locations][0][:latLng]
   end
-  
+
   def self.coordinate_connection
     coordinate_connection ||= Faraday.new({
       url: ENV['COORD_URL']

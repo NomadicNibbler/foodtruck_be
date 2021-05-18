@@ -1,0 +1,315 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://data.streetfoodapp.com/1.1/regions
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 17 May 2021 13:53:52 GMT
+      Server:
+      - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
+      Location:
+      - http://data.streetfoodapp.com/1.1/regions/
+      Content-Length:
+      - '250'
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>301 Moved Permanently</title>
+        </head><body>
+        <h1>Moved Permanently</h1>
+        <p>The document has moved <a href="http://data.streetfoodapp.com/1.1/regions/">here</a>.</p>
+        </body></html>
+  recorded_at: Mon, 17 May 2021 13:53:24 GMT
+- request:
+    method: get
+    uri: http://data.streetfoodapp.com/1.1/regions/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 17 May 2021 13:53:52 GMT
+      Server:
+      - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
+      Last-Modified:
+      - Mon, 17 May 2021 13:53:05 GMT
+      Etag:
+      - '"c31f-5c286e9ad0d80"'
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '49951'
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '[{"identifier":"abbotsford","name":"Abbotsford","name_long":"Abbotsford,
+        BC","time_zone":"America\/Vancouver","latitude":49.0504377,"longitude":-122.3044697,"country":"ca","example_location":{"address":"S
+        Fraser Way & Trethewey St","latitude":49.051676,"longitude":-122.326484},"regions":[]},{"identifier":"amsterdam-ny","name":"Amsterdam","name_long":"Amsterdam,
+        NY","time_zone":"America\/New_York","latitude":42.937546063804,"longitude":-74.190823048836,"country":"us","example_location":{"address":"Guy
+        Park Ave & Kimball St","latitude":42.94018513,"longitude":-74.19314048},"regions":[]},{"identifier":"ballarat","name":"Ballarat","name_long":"Ballarat,
+        Australia","time_zone":"Australia\/Melbourne","latitude":-37.497362927445,"longitude":143.83544921875,"country":"au","example_location":{"address":"Mair
+        St & Pleasant St N","latitude":-37.557606,"longitude":143.839416},"regions":[]},{"identifier":"blaine","name":"Blaine","name_long":"Blaine,
+        WA","time_zone":"America\/Vancouver","latitude":48.994075345594,"longitude":-122.74153709412,"country":"us","example_location":{"address":"Steen
+        St & 4th St","latitude":48.99174167,"longitude":-122.74806559},"regions":[]},{"identifier":"boston","name":"Boston","name_long":"Boston,
+        MA","time_zone":"America\/New_York","latitude":42.3600825,"longitude":-71.0588801,"country":"us","ios_app_bundle_identifier":"com.tatlowpark.streetfood.boston","ios_app_application_id":495605911,"android_app_application_id":"com.tatlowpark.streetfood.boston","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.boston","ios_app_url":"https:\/\/apps.apple.com\/app\/id495605911","example_location":{"address":"Hemenway
+        St & Forsyth St","latitude":42.340814,"longitude":-71.091263},"regions":[{"identifier":"chp","name":"City
+        Hall Plaza","name_long":null,"time_zone":"America\/New_York","latitude":42.360501503355,"longitude":-71.058817335748,"country":"us","regions":[]},{"identifier":"greenway","name":"Greenway","name_long":null,"time_zone":"America\/New_York","latitude":42.357831151814,"longitude":-71.052827314215,"country":"us","regions":[]},{"identifier":"sowa","name":"SoWa
+        Open Market","name_long":null,"time_zone":"America\/New_York","latitude":42.342303668093,"longitude":-71.064796974828,"country":"us","regions":[]}]},{"identifier":"brantford","name":"Brantford","name_long":"Brantford,
+        ON","time_zone":"America\/Toronto","latitude":43.1393867,"longitude":-80.2644254,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.toronto","ios_app_application_id":516237990,"android_app_application_id":"com.tatlowpark.streetfood.toronto","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.toronto","ios_app_url":"https:\/\/apps.apple.com\/app\/id516237990","regions":[]},{"identifier":"burlington","name":"Burlington","name_long":"Burlington,
+        ON","time_zone":"America\/Toronto","latitude":43.3255196,"longitude":-79.7990319,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.toronto","ios_app_application_id":516237990,"android_app_application_id":"com.tatlowpark.streetfood.toronto","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.toronto","ios_app_url":"https:\/\/apps.apple.com\/app\/id516237990","regions":[]},{"identifier":"burnaby","name":"Burnaby","name_long":"Burnaby,
+        BC","time_zone":"America\/Vancouver","latitude":49.2488091,"longitude":-122.9805104,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.vancouver","ios_app_application_id":412748042,"android_app_application_id":"com.tatlowpark.streetfood.vancouver","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.vancouver","ios_app_url":"https:\/\/apps.apple.com\/app\/id412748042","example_location":{"address":"Simon
+        Fraser University","latitude":49.278768,"longitude":-122.920661},"regions":[]},{"identifier":"calgary","name":"Calgary","name_long":"Calgary,
+        AB","time_zone":"America\/Edmonton","latitude":51.0486151,"longitude":-114.0708459,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.calgary","ios_app_application_id":455157244,"android_app_application_id":"com.tatlowpark.streetfood.calgary","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.calgary","ios_app_url":"https:\/\/apps.apple.com\/app\/id455157244","example_location":{"address":"1st
+        St & 2nd Ave SW","latitude":51.051201,"longitude":-114.065144},"regions":[{"identifier":"casel-marche","name":"Casel
+        March\u00e9","name_long":null,"time_zone":"America\/Edmonton","latitude":51.037683507983,"longitude":-114.11930322647,"country":"ca","regions":[]},{"identifier":"central-memorial-park","name":"Central
+        Memorial Park","name_long":null,"time_zone":"America\/Edmonton","latitude":51.041137540257,"longitude":-114.07012224197,"country":"ca","regions":[]},{"identifier":"east-village","name":"East
+        Village","name_long":null,"time_zone":"America\/Edmonton","latitude":51.047186379324,"longitude":-114.05190467834,"country":"ca","regions":[]},{"identifier":"haultain-park","name":"Haultain
+        Park","name_long":null,"time_zone":"America\/Edmonton","latitude":51.039987988785,"longitude":-114.06725764275,"country":"ca","regions":[]},{"identifier":"localmotive","name":"LocalMotive
+        Crossing","name_long":null,"time_zone":"America\/Edmonton","latitude":51.034941352945,"longitude":-114.03218507767,"country":"ca","regions":[]},{"identifier":"marda-loop","name":"Marda
+        Loop","name_long":null,"time_zone":"America\/Edmonton","latitude":51.024283234198,"longitude":-114.11269426346,"country":"ca","regions":[]},{"identifier":"market-collective","name":"Market
+        Collective","name_long":null,"time_zone":"America\/Edmonton","latitude":51.051552021438,"longitude":-114.06561613083,"country":"us","regions":[]},{"identifier":"max-bell","name":"Max
+        Bell Centre","name_long":null,"time_zone":"America\/Edmonton","latitude":51.041593105346,"longitude":-114.00426864624,"country":"us","regions":[]},{"identifier":"mcmahon-stadium","name":"McMahon
+        Stadium","name_long":null,"time_zone":"America\/Edmonton","latitude":51.070719807871,"longitude":-114.12121772766,"country":"ca","regions":[]},{"identifier":"victoria-park","name":"Victoria
+        Park","name_long":null,"time_zone":"America\/Edmonton","latitude":51.041758652748,"longitude":-114.05926942825,"country":"us","regions":[]},{"identifier":"westide-kings-church","name":"Westide
+        King''s Church","name_long":null,"time_zone":"America\/Edmonton","latitude":51.017251459111,"longitude":-114.18931365013,"country":"ca","regions":[]}]},{"identifier":"camrose","name":"Camrose","name_long":"Camrose,
+        AB","time_zone":"America\/Edmonton","latitude":53.022690064221,"longitude":-112.82474517822,"country":"ca","example_location":{"address":"50
+        St & 50 Ave","latitude":53.02222219,"longitude":-112.8248632},"regions":[]},{"identifier":"charlotte","name":"Charlotte","name_long":"Charlotte,
+        NC","time_zone":"EST","latitude":35.2270869,"longitude":-80.8431267,"country":"us","example_location":{"address":"N
+        Caldwell St & E Trade St","latitude":35.223842,"longitude":-80.839119},"regions":[]},{"identifier":"chilliwack","name":"Chilliwack","name_long":"Chilliwack,
+        BC","time_zone":"America\/Vancouver","latitude":49.1579401,"longitude":-121.9514666,"country":"ca","example_location":{"address":"Hodgins
+        Ave & School St","latitude":49.166569,"longitude":-121.960349},"regions":[]},{"identifier":"cincinnati","name":"Cincinnati","name_long":"Cincinnati,
+        OH","time_zone":"America\/New_York","latitude":39.1031182,"longitude":-84.5120196,"country":"us","example_location":{"address":"Broadway
+        St & E 5th St","latitude":39.102125,"longitude":-84.506434},"regions":[]},{"identifier":"columbus","name":"Columbus","name_long":"Columbus,
+        OH","time_zone":"America\/New_York","latitude":39.9611755,"longitude":-82.9987942,"country":"us","example_location":{"address":"S
+        High St & E Broad St","latitude":39.962164,"longitude":-83.000658},"regions":[]},{"identifier":"comox-valley","name":"Comox
+        Valley","name_long":"Comox Valley, BC","time_zone":"America\/Vancouver","latitude":49.694556602804,"longitude":-125.00763509902,"country":"ca","example_location":{"address":"Fitzgerald
+        Ave & 14th St, Courtenay","latitude":49.68433279,"longitude":-124.99505018},"regions":[]},{"identifier":"denver","name":"Denver","name_long":"Denver,
+        CO","time_zone":"America\/Denver","latitude":39.7392358,"longitude":-104.990251,"country":"us","example_location":{"address":"Market
+        St & 19th St","latitude":39.752733,"longitude":-104.994707},"regions":[]},{"identifier":"eastkootenay","name":"East
+        Kootenay","name_long":"East Kootenay, BC","time_zone":"America\/Vancouver","latitude":49.941622092412,"longitude":-115.59265281299,"country":"ca","example_location":{"address":"Baker
+        St & 10th Ave S, Cranbrook","latitude":49.51213897,"longitude":-115.76762736},"regions":[{"identifier":"fernie","name":"Fernie","name_long":"Fernie,
+        BC","time_zone":"America\/Vancouver","latitude":49.529671959633,"longitude":-115.05737304688,"country":"ca","example_location":{"address":"5th
+        St & 8th Ave","latitude":49.50595269,"longitude":-115.06848812},"regions":[]},{"identifier":"kimberley","name":"Kimberley","name_long":"Kimberley,
+        BC","time_zone":"America\/Vancouver","latitude":49.662198515728,"longitude":-115.9971600771,"country":"ca","example_location":{"address":"Kimberley
+        Ave & Howard St","latitude":49.68711217,"longitude":-115.98466098},"regions":[]}]},{"identifier":"edmonton","name":"Edmonton","name_long":"Edmonton,
+        AB","time_zone":"America\/Edmonton","latitude":53.544389,"longitude":-113.4909267,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.edmonton","ios_app_application_id":550037983,"android_app_application_id":"com.tatlowpark.streetfood.edmonton","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.edmonton","ios_app_url":"https:\/\/apps.apple.com\/app\/id550037983","example_location":{"address":"104th
+        Ave & 109th St NW","latitude":53.546096,"longitude":-113.508189},"regions":[{"identifier":"dtedm","name":"Downtown","name_long":null,"time_zone":"America\/Edmonton","latitude":53.545550912792,"longitude":-113.51010305156,"country":"ca","regions":[{"identifier":"churchill","name":"Churchill
+        Square","name_long":null,"time_zone":"America\/Edmonton","latitude":53.544832129282,"longitude":-113.49010813435,"country":"ca","regions":[]}]},{"identifier":"northlands","name":"Northlands","name_long":null,"time_zone":"America\/Edmonton","latitude":53.566265599406,"longitude":-113.45684051514,"country":"us","regions":[]},{"identifier":"sta","name":"St.
+        Albert","name_long":null,"time_zone":"America\/Edmonton","latitude":53.64234195795,"longitude":-113.63039260718,"country":"ca","regions":[]},{"identifier":"uofa","name":"University
+        of Alberta","name_long":null,"time_zone":"America\/Edmonton","latitude":53.523969245872,"longitude":-113.52406866577,"country":"ca","regions":[]},{"identifier":"whyte","name":"Whyte
+        Ave","name_long":null,"time_zone":"America\/Edmonton","latitude":53.517961071749,"longitude":-113.50211620331,"country":"ca","regions":[]}]},{"identifier":"eugene","name":"Eugene","name_long":"Eugene,
+        OR","time_zone":"America\/Vancouver","latitude":44.0520691,"longitude":-123.0867536,"country":"us","ios_app_bundle_identifier":"com.tatlowpark.streetfood.eugene","ios_app_application_id":954708527,"android_app_application_id":"com.tatlowpark.streetfood.eugene","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.eugene","ios_app_url":"https:\/\/apps.apple.com\/app\/id954708527","example_location":{"address":"Pearl
+        St & W 13th Ave","latitude":44.045579,"longitude":-123.089592},"regions":[{"identifier":"beergarden","name":"Beergarden","name_long":null,"time_zone":"America\/Vancouver","latitude":44.053830325528,"longitude":-123.10409724712,"country":"us","regions":[]},{"identifier":"cider-station","name":"Cider
+        Station","name_long":null,"time_zone":"America\/Vancouver","latitude":44.072521466448,"longitude":-123.11799049377,"country":"us","regions":[]},{"identifier":"ninkasi","name":"Ninkasi
+        Brewing","name_long":null,"time_zone":"America\/Vancouver","latitude":44.057073306194,"longitude":-123.10972452164,"country":"us","regions":[]},{"identifier":"uo","name":"University
+        Of Oregon","name_long":null,"time_zone":"America\/Vancouver","latitude":44.044672239757,"longitude":-123.07288169861,"country":"us","regions":[]}]},{"identifier":"everett","name":"Everett","name_long":"Everett,
+        WA","time_zone":"America\/Vancouver","latitude":47.982001865488,"longitude":-122.20157623291,"country":"us","example_location":{"address":"Rucker
+        Ave & California St","latitude":47.98065891,"longitude":-122.2114414},"regions":[]},{"identifier":"fairfax","name":"Fairfax","name_long":"Fairfax,
+        VA","time_zone":"America\/New_York","latitude":38.8462236,"longitude":-77.3063733,"country":"us","example_location":{"address":"University
+        Dr & North St","latitude":38.84685,"longitude":-77.305004},"regions":[]},{"identifier":"fredericton","name":"Fredericton","name_long":"Fredericton,
+        NB","time_zone":"Canada\/Atlantic","latitude":46.022018818622,"longitude":-66.61865234375,"country":"ca","example_location":{"address":"King
+        St & York St","latitude":45.962086,"longitude":-66.643991},"regions":[]},{"identifier":"gatineau","name":"Gatineau","name_long":"Gatineau,
+        QC","time_zone":"America\/Montreal","latitude":45.463399337938,"longitude":-75.699957222229,"country":"ca","example_location":{"address":"Boulevard
+        Gr\u00e9ber & Rue Lafortune","latitude":45.46337676,"longitude":-75.69997332},"regions":[]},{"identifier":"greenville","name":"Greenville","name_long":"Greenville,
+        SC","time_zone":"America\/New_York","latitude":34.8511174351,"longitude":-82.398409843445,"country":"us","example_location":{"address":"E
+        Elford St & N Main St","latitude":34.85486807,"longitude":-82.3971653},"regions":[]},{"identifier":"guelph","name":"Guelph","name_long":"Guelph,
+        ON","time_zone":"America\/Toronto","latitude":43.5448048,"longitude":-80.2481666,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.toronto","ios_app_application_id":516237990,"android_app_application_id":"com.tatlowpark.streetfood.toronto","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.toronto","ios_app_url":"https:\/\/apps.apple.com\/app\/id516237990","example_location":{"address":"Wyndham
+        St N & Macdonell St","latitude":43.544817,"longitude":-80.24816},"regions":[]},{"identifier":"hagerstown","name":"Hagerstown","name_long":"Hagerstown,
+        MD","time_zone":"America\/New_York","latitude":39.6417629,"longitude":-77.7199932,"country":"us","example_location":{"address":"N
+        Potomac St & E Washington St","latitude":39.642012,"longitude":-77.720322},"regions":[]},{"identifier":"halifax","name":"Halifax","name_long":"Halifax,
+        NS","time_zone":"Canada\/Atlantic","latitude":44.6488625,"longitude":-63.5753196,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.halifax","ios_app_application_id":846676460,"android_app_application_id":"com.tatlowpark.streetfood.halifax","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.halifax","ios_app_url":"https:\/\/apps.apple.com\/app\/id846676460","example_location":{"address":"Duke
+        St & Barrington St","latitude":44.649025,"longitude":-63.575821},"regions":[{"identifier":"halifax-museum-of-natural-history","name":"Museum
+        of Natural History","name_long":null,"time_zone":"Canada\/Atlantic","latitude":44.645142348267,"longitude":-63.585466146469,"country":"ca","regions":[]},{"identifier":"truro","name":"Truro","name_long":null,"time_zone":"Canada\/Atlantic","latitude":45.389306476356,"longitude":-63.308715820312,"country":"ca","regions":[]}]},{"identifier":"hamilton","name":"Hamilton","name_long":"Hamilton,
+        ON","time_zone":"America\/Toronto","latitude":43.2557206,"longitude":-79.8711024,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.toronto","ios_app_application_id":516237990,"android_app_application_id":"com.tatlowpark.streetfood.toronto","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.toronto","ios_app_url":"https:\/\/apps.apple.com\/app\/id516237990","example_location":{"address":"Barton
+        St & James St N","latitude":43.264123,"longitude":-79.865787},"regions":[{"identifier":"ancaster","name":"Ancaster","name_long":null,"time_zone":"America\/Toronto","latitude":43.2082533921,"longitude":-80.006238500453,"country":"ca","regions":[{"identifier":"holyfoodtruck","name":"Holy
+        Food Truck at Bethesda United Church","name_long":null,"time_zone":"America\/Toronto","latitude":43.196014646766,"longitude":-80.007787882155,"country":"ca","regions":[]}]},{"identifier":"binbrook","name":"Binbrook","name_long":null,"time_zone":"America\/Toronto","latitude":43.124428712306,"longitude":-79.806763969728,"country":"ca","regions":[{"identifier":"fairgrounds","name":"Fairgrounds","name_long":null,"time_zone":"America\/Toronto","latitude":43.126264597355,"longitude":-79.81541633606,"country":"ca","regions":[]}]},{"identifier":"foodtruckalley","name":"Food
+        Truck Alley","name_long":null,"time_zone":"America\/Toronto","latitude":43.253533101982,"longitude":-79.902963638306,"country":"ca","regions":[]},{"identifier":"gage","name":"Gage
+        Park","name_long":null,"time_zone":"America\/Toronto","latitude":43.241224895992,"longitude":-79.828281256901,"country":"ca","regions":[]},{"identifier":"gore","name":"Gore
+        Park","name_long":null,"time_zone":"America\/Toronto","latitude":43.256093465145,"longitude":-79.867501830477,"country":"ca","regions":[]},{"identifier":"heritage-green","name":"Heritage
+        Green Farmers Market","name_long":null,"time_zone":"America\/Toronto","latitude":43.193985320148,"longitude":-79.787499904633,"country":"ca","regions":[]},{"identifier":"sewhungry","name":"Sew
+        Hungry 2015","name_long":null,"time_zone":"America\/Toronto","latitude":43.247058394891,"longitude":-79.817733764648,"country":"ca","regions":[]},{"identifier":"stelizabeth","name":"St.
+        Elizabeth Village","name_long":null,"time_zone":"America\/Toronto","latitude":43.202939905091,"longitude":-79.907378659326,"country":"ca","regions":[]},{"identifier":"waterdown","name":"Waterdown","name_long":null,"time_zone":"America\/Toronto","latitude":43.327692780979,"longitude":-79.911325056809,"country":"ca","regions":[{"identifier":"heavenlyfoodtrucks","name":"Heavenly
+        Food Trucks at Bethel Church","name_long":null,"time_zone":"America\/Toronto","latitude":43.349840418967,"longitude":-79.870523631992,"country":"ca","regions":[]}]}]},{"identifier":"ithaca","name":"Ithaca","name_long":"Ithaca,
+        NY","time_zone":"America\/New_York","latitude":42.4439614,"longitude":-76.5018807,"country":"us","example_location":{"address":"Park
+        Pl & W Buffalo St","latitude":42.441158,"longitude":-76.505765},"regions":[]},{"identifier":"jacksonville","name":"Jacksonville","name_long":"Jacksonville,
+        FL","time_zone":"America\/Toronto","latitude":30.3321838,"longitude":-81.655651,"country":"us","example_location":{"address":"Monroe
+        St W & N Laura St","latitude":30.328841,"longitude":-81.658798},"regions":[]},{"identifier":"kelowna","name":"Kelowna","name_long":"Kelowna,
+        BC","time_zone":"America\/Vancouver","latitude":49.8879519,"longitude":-119.4960106,"country":"ca","example_location":{"address":"Mill
+        St & Bernard Ave","latitude":49.886375,"longitude":-119.498707},"regions":[]},{"identifier":"kitchener-waterloo","name":"Kitchener-Waterloo","name_long":"Kitchener-Waterloo,
+        ON","time_zone":"America\/Toronto","latitude":43.4534718,"longitude":-80.5001242,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.toronto","ios_app_application_id":516237990,"android_app_application_id":"com.tatlowpark.streetfood.toronto","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.toronto","ios_app_url":"https:\/\/apps.apple.com\/app\/id516237990","example_location":{"address":"King
+        St W & Queen St","latitude":43.449879,"longitude":-80.489276},"regions":[{"identifier":"st-lukes","name":"Saint
+        Luke''s United Church","name_long":null,"time_zone":"America\/Toronto","latitude":43.423432532927,"longitude":-80.310299396515,"country":"ca","regions":[]}]},{"identifier":"london","name":"London","name_long":"London,
+        ON","time_zone":"America\/Toronto","latitude":42.9849233,"longitude":-81.2452768,"country":"ca","example_location":{"address":"King
+        St & Wellington St","latitude":42.983786,"longitude":-81.244779},"regions":[]},{"identifier":"london-uk","name":"London","name_long":"London,
+        UK","time_zone":"Europe\/London","latitude":51.5073509,"longitude":-0.12775829999998,"country":"uk","example_location":{"address":"Praed
+        St & Norfolk Pl","latitude":51.517092,"longitude":-0.172826},"regions":[]},{"identifier":"maui","name":"Maui","name_long":"Maui,
+        HI","time_zone":"Pacific\/Honolulu","latitude":20.7983626,"longitude":-156.3319253,"country":"us","example_location":{"address":"S
+        Puunene Ave & E Kaahumanu Ave","latitude":20.891345,"longitude":-156.467396},"regions":[]},{"identifier":"melbourne","name":"Melbourne","name_long":"Melbourne,
+        Australia","time_zone":"Australia\/Melbourne","latitude":-37.811557409469,"longitude":144.95384216083,"country":"au","example_location":{"address":"York
+        St & Moray St","latitude":-37.83004998,"longitude":144.96197462},"regions":[]},{"identifier":"moncton","name":"Moncton","name_long":"Moncton,
+        NB","time_zone":"Canada\/Atlantic","latitude":46.0878165,"longitude":-64.7782313,"country":"ca","example_location":{"address":"Park
+        St & Weldon St","latitude":46.09131,"longitude":-64.78852},"regions":[]},{"identifier":"montreal","name":"Montreal","name_long":"Montreal,
+        QC","time_zone":"America\/Montreal","latitude":45.5016889,"longitude":-73.567256,"country":"ca","example_location":{"address":"Rue
+        Ontario & Rue Saint-Denis","latitude":45.51585,"longitude":-73.565311},"regions":[]},{"identifier":"nanaimo","name":"Nanaimo","name_long":"Nanaimo,
+        BC","time_zone":"America\/Vancouver","latitude":-123.94325256348,"longitude":49.165887228593,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.victoria","ios_app_application_id":861375208,"android_app_application_id":"com.tatlowpark.streetfood.victoria","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.victoria","ios_app_url":"https:\/\/apps.apple.com\/app\/id861375208","example_location":{"address":"Bastion
+        St & Skinner St","latitude":49.16631978,"longitude":-123.93783633},"regions":[]},{"identifier":"nashville","name":"Nashville","name_long":"Nashville,
+        TN","time_zone":"America\/Chicago","latitude":36.1626638,"longitude":-86.7816016,"country":"us","example_location":{"address":"Union
+        St & 4th Ave N","latitude":36.165105,"longitude":-86.77984},"regions":[]},{"identifier":"newfoundland","name":"Newfoundland","name_long":"Newfoundland","time_zone":"America\/St_Johns","latitude":-52.722320556641,"longitude":47.568079394898,"country":"ca","example_location":{"address":"Prescott
+        St & Gower St","latitude":-52.70669937,"longitude":47.567189},"regions":[]},{"identifier":"newwest","name":"New
+        Westminster","name_long":"New Westminster, BC","time_zone":"America\/Vancouver","latitude":49.2057179,"longitude":-122.910956,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.vancouver","ios_app_application_id":412748042,"android_app_application_id":"com.tatlowpark.streetfood.vancouver","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.vancouver","ios_app_url":"https:\/\/apps.apple.com\/app\/id412748042","example_location":{"address":"Columbia
+        Ave & Elliot St","latitude":49.206514,"longitude":-122.901739},"regions":[]},{"identifier":"niagara","name":"Niagara
+        Region","name_long":"Niagara Region, ON","time_zone":"America\/Toronto","latitude":43.0581645,"longitude":-79.2902133,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.toronto","ios_app_application_id":516237990,"android_app_application_id":"com.tatlowpark.streetfood.toronto","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.toronto","ios_app_url":"https:\/\/apps.apple.com\/app\/id516237990","example_location":{"address":"Mississauga
+        St & Queen St","latitude":43.258557,"longitude":-79.07871},"regions":[]},{"identifier":"orlando","name":"Orlando","name_long":"Orlando,
+        FL","time_zone":"America\/Toronto","latitude":28.536134156842,"longitude":-81.387023925781,"country":"us","example_location":{"address":"S
+        Court Ave & E Pine St","latitude":28.54131803,"longitude":-81.37800097},"regions":[]},{"identifier":"ottawa","name":"Ottawa","name_long":"Ottawa,
+        ON","time_zone":"America\/Toronto","latitude":45.4215296,"longitude":-75.6971931,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.ottawa","ios_app_application_id":604484063,"android_app_application_id":"com.tatlowpark.streetfood.ottawa","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.ottawa","ios_app_url":"https:\/\/apps.apple.com\/app\/id604484063","example_location":{"address":"Wellington
+        St & O''Connor St","latitude":45.422625,"longitude":-75.699867},"regions":[{"identifier":"ottcityhall","name":"City
+        Hall","name_long":null,"time_zone":"America\/Toronto","latitude":45.420709846506,"longitude":-75.690618753433,"country":"ca","regions":[]}]},{"identifier":"owen-sound","name":"Owen
+        Sound","name_long":"Owen Sound, ON","time_zone":"America\/Toronto","latitude":44.569047846705,"longitude":-80.940532684326,"country":"ca","example_location":{"address":"2nd
+        Ave E & 10th St E","latitude":44.5677179,"longitude":-80.94320416},"regions":[]},{"identifier":"port-colborne","name":"Port
+        Colborne","name_long":"Port Colborne, ON","time_zone":"America\/Toronto","latitude":42.8865204,"longitude":-79.2508558,"country":"ca","example_location":{"address":"Sugarloaf
+        St & Steele St","latitude":42.880678,"longitude":-79.260178},"regions":[]},{"identifier":"princerupert","name":"Prince
+        Rupert","name_long":"Prince Rupert, BC","time_zone":"America\/Vancouver","latitude":54.3150367,"longitude":-130.3208187,"country":"ca","example_location":{"address":"Park
+        Ave & Smithers St","latitude":54.300791,"longitude":-130.339246},"regions":[]},{"identifier":"reddeer","name":"Red
+        Deer","name_long":"Red Deer, AB","time_zone":"America\/Edmonton","latitude":52.2681118,"longitude":-113.8112386,"country":"ca","example_location":{"address":"50th
+        St & 49th Ave","latitude":52.269097,"longitude":-113.811179},"regions":[]},{"identifier":"regina","name":"Regina","name_long":"Regina,
+        SK","time_zone":"America\/Regina","latitude":50.4452112,"longitude":-104.6188943,"country":"ca","example_location":{"address":"Victoria
+        Ave & Smith St","latitude":50.447346,"longitude":-104.615786},"regions":[]},{"identifier":"richmond","name":"Richmond","name_long":"Richmond,
+        BC","time_zone":"America\/Vancouver","latitude":49.1665898,"longitude":-123.133569,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.vancouver","ios_app_application_id":412748042,"android_app_application_id":"com.tatlowpark.streetfood.vancouver","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.vancouver","ios_app_url":"https:\/\/apps.apple.com\/app\/id412748042","example_location":{"address":"No
+        3 Rd & Granville Ave","latitude":49.162764,"longitude":-123.136272},"regions":[]},{"identifier":"rochester-mn","name":"Rochester","name_long":"Rochester,
+        MN","time_zone":"America\/Chicago","latitude":44.0121221,"longitude":-92.4801989,"country":"us","example_location":{"address":"Broadway
+        & W Center St","latitude":44.023527,"longitude":-92.462815},"regions":[]},{"identifier":"saint-john","name":"Saint
+        John","name_long":"Saint John, NB","time_zone":"Canada\/Atlantic","latitude":45.269851219648,"longitude":-66.066589355469,"country":"ca","example_location":{"address":"Union
+        St & Crown St","latitude":45.27658597,"longitude":-66.05079651},"regions":[]},{"identifier":"salem","name":"Salem","name_long":"Salem,
+        OR","time_zone":"America\/Vancouver","latitude":44.9428975,"longitude":-123.0350963,"country":"us","example_location":{"address":"Court
+        St & Capital St","latitude":44.938718,"longitude":-123.028594},"regions":[]},{"identifier":"saltlakecity","name":"Salt
+        Lake City","name_long":"Salt Lake City, UT","time_zone":"America\/Edmonton","latitude":40.7607793,"longitude":-111.8910474,"country":"us","example_location":{"address":"W
+        Broadway & 4th W","latitude":40.762634,"longitude":-111.902511},"regions":[]},{"identifier":"saltspring","name":"Saltspring
+        Island","name_long":"Saltspring Island, BC","time_zone":"America\/Vancouver","latitude":48.8166622,"longitude":-123.5088755,"country":"ca","example_location":{"address":"Rainbow
+        Rd & Lower Ganges Rd","latitude":48.85439512,"longitude":-123.50044727},"regions":[]},{"identifier":"san-antonio","name":"San
+        Antonio","name_long":"San Antonio, TX","time_zone":"America\/Chicago","latitude":29.438262458556,"longitude":-98.499603271484,"country":"us","example_location":{"address":"S
+        Frio St & Buena Vista St","latitude":29.42498435,"longitude":-98.50388408},"regions":[]},{"identifier":"santa-rosa","name":"Santa
+        Rosa","name_long":"Santa Rosa, CA","time_zone":"America\/Vancouver","latitude":38.440429,"longitude":-122.7140548,"country":"us","example_location":{"address":"Wilson
+        St & 5th St","latitude":38.438084,"longitude":-122.721143},"regions":[]},{"identifier":"saskatoon","name":"Saskatoon","name_long":"Saskatoon,
+        SK","time_zone":"America\/Regina","latitude":52.1332144,"longitude":-106.6700458,"country":"ca","example_location":{"address":"Queen
+        St & 7 Ave N","latitude":52.136652,"longitude":-106.652177},"regions":[]},{"identifier":"seattle","name":"Seattle","name_long":"Seattle,
+        WA","time_zone":"America\/Vancouver","latitude":47.6062095,"longitude":-122.3320708,"country":"us","example_location":{"address":"4th
+        Ave & Spring St","latitude":47.606782,"longitude":-122.33352},"regions":[]},{"identifier":"southokanagan","name":"South
+        Okanagan","name_long":"South Okanagan, BC","time_zone":"America\/Vancouver","latitude":49.500194148161,"longitude":-119.5932674408,"country":"ca","example_location":{"address":"Main
+        St & Front St, Penticton","latitude":49.5003335,"longitude":-119.59320307},"regions":[]},{"identifier":"squamish","name":"Squamish","name_long":"Squamish,
+        BC","time_zone":"America\/Vancouver","latitude":49.7016339,"longitude":-123.1558121,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.vancouver","ios_app_application_id":412748042,"android_app_application_id":"com.tatlowpark.streetfood.vancouver","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.vancouver","ios_app_url":"https:\/\/apps.apple.com\/app\/id412748042","example_location":{"address":"Pemberton
+        Ave & 3rd Ave","latitude":49.70158,"longitude":-123.154087},"regions":[]},{"identifier":"stcatherines","name":"St.
+        Catherines","name_long":"St. Catherines, ON","time_zone":"America\/Toronto","latitude":43.1593745,"longitude":-79.2468626,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.toronto","ios_app_application_id":516237990,"android_app_application_id":"com.tatlowpark.streetfood.toronto","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.toronto","ios_app_url":"https:\/\/apps.apple.com\/app\/id516237990","example_location":{"address":"Ontario
+        St & Welland Ave","latitude":43.160552,"longitude":-79.255809},"regions":[]},{"identifier":"sunshinecoast","name":"Sunshine
+        Coast","name_long":"Sunshine Coast, BC","time_zone":"America\/Vancouver","latitude":49.762729907369,"longitude":-124.06041692569,"country":"ca","example_location":{"address":"Duncan
+        St & Michigan Ave, Powell River","latitude":49.83588222,"longitude":-124.5239079},"regions":[]},{"identifier":"surrey","name":"Surrey","name_long":"Surrey,
+        BC","time_zone":"America\/Vancouver","latitude":49.1044302,"longitude":-122.801094,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.vancouver","ios_app_application_id":412748042,"android_app_application_id":"com.tatlowpark.streetfood.vancouver","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.vancouver","ios_app_url":"https:\/\/apps.apple.com\/app\/id412748042","example_location":{"address":"King
+        George Blvd & Old Yale Rd","latitude":49.184388,"longitude":-122.846027},"regions":[]},{"identifier":"sydney","name":"Sydney","name_long":"Sydney,
+        Australia","time_zone":"Australia\/Melbourne","latitude":-33.868267689438,"longitude":151.1962890625,"country":"au","example_location":{"address":"Hunter
+        St & Pitt St","latitude":-33.86566195,"longitude":151.20864868},"regions":[]},{"identifier":"tallahassee","name":"Tallahassee","name_long":"Tallahassee,
+        FL","time_zone":"America\/New_York","latitude":30.4382559,"longitude":-84.2807329,"country":"us","ios_app_bundle_identifier":"com.tatlowpark.streetfood.tallahassee","ios_app_application_id":830497238,"android_app_application_id":"com.tatlowpark.streetfood.tallahassee","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.tallahassee","ios_app_url":"https:\/\/apps.apple.com\/app\/id830497238","example_location":{"address":"W
+        Gaines St & S Duval St","latitude":30.435428,"longitude":-84.283118},"regions":[]},{"identifier":"the-woodlands","name":"The
+        Woodlands","name_long":"The Woodlands, TX","time_zone":"America\/Chicago","latitude":30.177342504214,"longitude":-95.458182096481,"country":"us","example_location":{"address":"Research
+        Forest Dr & Pinecroft Dr","latitude":30.1773425,"longitude":-95.4581821},"regions":[]},{"identifier":"toronto","name":"Toronto","name_long":"Toronto,
+        ON","time_zone":"America\/Toronto","latitude":43.653226,"longitude":-79.3831843,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.toronto","ios_app_application_id":516237990,"android_app_application_id":"com.tatlowpark.streetfood.toronto","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.toronto","ios_app_url":"https:\/\/apps.apple.com\/app\/id516237990","example_location":{"address":"Front
+        St & Yonge St","latitude":43.646805,"longitude":-79.376725},"regions":[{"identifier":"10bay","name":"10
+        Bay St","name_long":null,"time_zone":"America\/Toronto","latitude":43.641277364305,"longitude":-79.376993179321,"country":"ca","regions":[]},{"identifier":"lot110","name":"110
+        Adelaide St E","name_long":null,"time_zone":"America\/Toronto","latitude":43.651546978436,"longitude":-79.373352995873,"country":"ca","regions":[]},{"identifier":"ajax","name":"Ajax","name_long":null,"time_zone":"America\/Toronto","latitude":43.867479382565,"longitude":-79.024188387881,"country":"ca","regions":[]},{"identifier":"bayandfront","name":"Bay
+        & Front","name_long":null,"time_zone":"America\/Toronto","latitude":43.645992658487,"longitude":-79.379451615067,"country":"ca","regions":[]},{"identifier":"cne","name":"CNE","name_long":null,"time_zone":"America\/Toronto","latitude":43.633876027135,"longitude":-79.414470524611,"country":"ca","regions":[]},{"identifier":"davidpecaut","name":"David
+        Pecaut Square","name_long":null,"time_zone":"America\/Toronto","latitude":43.646311274796,"longitude":-79.388076066971,"country":"ca","regions":[]},{"identifier":"distillery","name":"Distillery
+        District","name_long":null,"time_zone":"America\/Toronto","latitude":43.649672770173,"longitude":-79.359097480774,"country":"ca","regions":[]},{"identifier":"electricisland","name":"Electric
+        Island - Centre Island","name_long":null,"time_zone":"America\/Toronto","latitude":43.615022336059,"longitude":-79.381864070892,"country":"ca","regions":[]},{"identifier":"foodtruckalleyto","name":"Food
+        Truck Alley","name_long":null,"time_zone":"America\/Toronto","latitude":43.6538352352,"longitude":-79.373291394899,"country":"ca","regions":[]},{"identifier":"haltonhills","name":"Halton
+        Hills","name_long":null,"time_zone":"America\/Toronto","latitude":43.643994286838,"longitude":-79.959879142515,"country":"ca","regions":[{"identifier":"torontopremiumoutlets","name":"Toronto
+        Premium Outlets","name_long":null,"time_zone":"America\/Toronto","latitude":43.572527870655,"longitude":-79.827346801758,"country":"ca","regions":[]}]},{"identifier":"liberty","name":"Liberty
+        Village","name_long":null,"time_zone":"America\/Toronto","latitude":43.638002681549,"longitude":-79.419693033175,"country":"ca","regions":[]},{"identifier":"market-707","name":"Market
+        707","name_long":null,"time_zone":"America\/Toronto","latitude":43.652202378553,"longitude":-79.404136598009,"country":"ca","regions":[]},{"identifier":"milton","name":"Milton","name_long":null,"time_zone":"America\/Toronto","latitude":43.512213114659,"longitude":-79.950842483241,"country":"ca","regions":[{"identifier":"curbyourappetite","name":"Curb
+        Your Appetite - Milton District High School","name_long":null,"time_zone":"America\/Toronto","latitude":43.505577202971,"longitude":-79.870176315308,"country":"ca","regions":[]}]},{"identifier":"mississauga","name":"Mississauga","name_long":null,"time_zone":"America\/Toronto","latitude":43.599102706526,"longitude":-79.65748099659,"country":"ca","regions":[{"identifier":"celebrationsquare","name":"Celebration
+        Square","name_long":null,"time_zone":"America\/Toronto","latitude":43.587596533075,"longitude":-79.642918109894,"country":"ca","regions":[]}]},{"identifier":"nps","name":"Nathan
+        Phillips Square","name_long":null,"time_zone":"America\/Toronto","latitude":43.652528848854,"longitude":-79.383225854997,"country":"ca","regions":[]},{"identifier":"oxfordtower","name":"Oxford
+        Dynamic Funds Tower - Adelaide St & King St","name_long":null,"time_zone":"America\/Toronto","latitude":43.649843579679,"longitude":-79.378226995468,"country":"ca","regions":[]},{"identifier":"pickering","name":"Pickering","name_long":null,"time_zone":"America\/Toronto","latitude":43.835857038338,"longitude":-79.083023071289,"country":"ca","regions":[]},{"identifier":"propeller","name":"Propeller
+        Coffee - 50 Wade Ave","name_long":null,"time_zone":"America\/Toronto","latitude":43.659494412821,"longitude":-79.444992577797,"country":"ca","regions":[]},{"identifier":"roundhouse","name":"Roundhouse
+        Park - Steam Whistle Brewing","name_long":null,"time_zone":"America\/Toronto","latitude":43.641474837261,"longitude":-79.385555857539,"country":"ca","regions":[]},{"identifier":"royal-bank-plaza","name":"Royal
+        Bank Plaza","name_long":null,"time_zone":"America\/Toronto","latitude":43.646470544102,"longitude":-79.379986524582,"country":"ca","regions":[]},{"identifier":"sony","name":"Sony
+        Centre","name_long":null,"time_zone":"America\/Toronto","latitude":43.647026756514,"longitude":-79.376443123454,"country":"ca","regions":[]},{"identifier":"stoufville","name":"Stoufville","name_long":null,"time_zone":"America\/Toronto","latitude":43.977088189343,"longitude":-79.24747467041,"country":"ca","regions":[]},{"identifier":"tooutlets","name":"Toronto
+        Premium Outlets","name_long":null,"time_zone":"America\/Toronto","latitude":43.577594989213,"longitude":-79.835490595858,"country":"ca","regions":[]},{"identifier":"university-of-toronto","name":"University
+        of Toronto","name_long":null,"time_zone":"America\/Toronto","latitude":43.663977468864,"longitude":-79.395672247021,"country":"ca","regions":[]},{"identifier":"vaughan","name":"Vaughan","name_long":null,"time_zone":"America\/Toronto","latitude":43.824983747267,"longitude":-79.514236450195,"country":"ca","regions":[{"identifier":"canadas-wonderland","name":"Canada''s
+        Wonderland","name_long":null,"time_zone":"America\/Toronto","latitude":43.842498602156,"longitude":-79.542474746704,"country":"ca","regions":[]}]},{"identifier":"whitby","name":"Whitby","name_long":null,"time_zone":"America\/Toronto","latitude":43.871984802545,"longitude":-78.94603729248,"country":"ca","regions":[]},{"identifier":"woodbinepark","name":"Woodbine
+        Park","name_long":null,"time_zone":"America\/Toronto","latitude":43.664116729154,"longitude":-79.314555459108,"country":"ca","regions":[]}]},{"identifier":"tyler","name":"Tyler","name_long":"Tyler,
+        TX","time_zone":"US\/Central","latitude":32.35140778228,"longitude":-95.301895141602,"country":"us","example_location":{"address":"Erwin
+        St & Broadway Ave","latitude":32.35080052,"longitude":-95.3006506},"regions":[]},{"identifier":"vancouver","name":"Vancouver","name_long":"Vancouver,
+        BC","time_zone":"America\/Vancouver","latitude":49.2827291,"longitude":-123.1207375,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.vancouver","ios_app_application_id":412748042,"android_app_application_id":"com.tatlowpark.streetfood.vancouver","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.vancouver","ios_app_url":"https:\/\/apps.apple.com\/app\/id412748042","example_location":{"address":"Granville
+        St & W Georgia St","latitude":49.282466,"longitude":-123.118139},"regions":[{"identifier":"armoury-district","name":"Armoury
+        District","name_long":null,"time_zone":"America\/Vancouver","latitude":49.26924360935,"longitude":-123.14221143723,"country":"ca","regions":[]},{"identifier":"btc","name":"Broadway
+        Tech Centre","name_long":null,"time_zone":"America\/Vancouver","latitude":49.260567722117,"longitude":-123.04283022881,"country":"ca","regions":[]},{"identifier":"cityhall","name":"City
+        Hall","name_long":null,"time_zone":"America\/Vancouver","latitude":49.261377346748,"longitude":-123.11405897141,"country":"ca","regions":[]},{"identifier":"commercial","name":"Commercial
+        Drive","name_long":null,"time_zone":"America\/Vancouver","latitude":49.268698847671,"longitude":-123.06962013245,"country":"ca","regions":[]},{"identifier":"dtvan","name":"Downtown","name_long":"Downtown
+        Vancouver","time_zone":"America\/Vancouver","latitude":49.292132151947,"longitude":-123.13046137601,"country":"ca","regions":[{"identifier":"vag","name":"Art
+        Gallery","name_long":null,"time_zone":"America\/Vancouver","latitude":49.282434586811,"longitude":-123.12124586782,"country":"ca","regions":[]},{"identifier":"harbourcentre","name":"Harbour
+        Centre","name_long":null,"time_zone":"America\/Vancouver","latitude":49.284562955875,"longitude":-123.11187028885,"country":"ca","regions":[]},{"identifier":"plazaofnations","name":"Plaza
+        of Nations","name_long":null,"time_zone":"America\/Vancouver","latitude":49.275402454094,"longitude":-123.11045408249,"country":"ca","regions":[]},{"identifier":"stanleypark","name":"Stanley
+        Park","name_long":null,"time_zone":"America\/Vancouver","latitude":49.302417577796,"longitude":-123.14181996218,"country":"ca","regions":[]},{"identifier":"streetfoodcity","name":"Street
+        Food City 2020","name_long":null,"time_zone":"America\/Vancouver","latitude":49.282434586811,"longitude":-123.12124586782,"country":"ca","regions":[]},{"identifier":"vanconventions","name":"Vancouver
+        Convention Centre","name_long":null,"time_zone":"America\/Vancouver","latitude":49.289002619582,"longitude":-123.11644907759,"country":"ca","regions":[]}]},{"identifier":"foodcartfest","name":"Food
+        Cart Fest","name_long":null,"time_zone":"America\/Vancouver","latitude":49.270101049489,"longitude":-123.11281283361,"country":"ca","regions":[]},{"identifier":"gastown","name":"Gastown","name_long":null,"time_zone":"America\/Vancouver","latitude":49.283680391824,"longitude":-123.10643695117,"country":"ca","regions":[]},{"identifier":"granvilleisland","name":"Granville
+        Island","name_long":null,"time_zone":"America\/Vancouver","latitude":49.270411901905,"longitude":-123.13537422581,"country":"ca","regions":[]},{"identifier":"gnw","name":"Great
+        Northern Way","name_long":null,"time_zone":"America\/Vancouver","latitude":49.266311550335,"longitude":-123.08704376221,"country":"ca","regions":[]},{"identifier":"kitsilano","name":"Kitsilano","name_long":null,"time_zone":"America\/Vancouver","latitude":49.269796047911,"longitude":-123.1847926487,"country":"ca","regions":[{"identifier":"kitsbeach","name":"Kitsilano
+        Beach","name_long":null,"time_zone":"America\/Vancouver","latitude":49.276065198645,"longitude":-123.15413025677,"country":"ca","regions":[]},{"identifier":"vanierpark","name":"Vanier
+        Park","name_long":null,"time_zone":"America\/Vancouver","latitude":49.276773640232,"longitude":-123.14399925094,"country":"ca","regions":[]}]},{"identifier":"mount-pleasant","name":"Mount
+        Pleasant","name_long":null,"time_zone":"America\/Vancouver","latitude":49.263004995141,"longitude":-123.09734835543,"country":"ca","regions":[{"identifier":"33-acres","name":"33
+        Acres Brewing Co.","name_long":null,"time_zone":"America\/Vancouver","latitude":49.263827909857,"longitude":-123.10504674912,"country":"ca","regions":[]},{"identifier":"brassneck","name":"Brassneck
+        Brewery","name_long":null,"time_zone":"America\/Vancouver","latitude":49.265648239821,"longitude":-123.10069084167,"country":"ca","regions":[]},{"identifier":"glaciermedia","name":"Glacier
+        Media","name_long":null,"time_zone":"America\/Vancouver","latitude":49.267630144422,"longitude":-123.10880184174,"country":"ca","regions":[]}]},{"identifier":"natbailey","name":"Nat
+        Bailey Stadium","name_long":null,"time_zone":"America\/Vancouver","latitude":49.243646796904,"longitude":-123.10607804432,"country":"ca","regions":[]},{"identifier":"northvan","name":"North
+        Vancouver","name_long":null,"time_zone":"America\/Vancouver","latitude":49.33280716248,"longitude":-123.02920403798,"country":"ca","regions":[{"identifier":"shipyards","name":"Shipyards
+        Night Market","name_long":null,"time_zone":"America\/Vancouver","latitude":49.310110339149,"longitude":-123.07923126562,"country":"ca","regions":[]},{"identifier":"wildeye","name":"Wildeye
+        Brewing","name_long":null,"time_zone":"America\/Vancouver","latitude":49.305440917671,"longitude":-123.03444504738,"country":"us","regions":[]}]},{"identifier":"pne","name":"PNE
+        - Pacific National Exhibition","name_long":null,"time_zone":"America\/Vancouver","latitude":49.284603437912,"longitude":-123.03792715073,"country":"ca","regions":[]},{"identifier":"railtown","name":"Railtown","name_long":null,"time_zone":"America\/Vancouver","latitude":49.285876102296,"longitude":-123.08882187757,"country":"ca","regions":[]},{"identifier":"ubc","name":"University
+        of British Columbia","name_long":null,"time_zone":"America\/Vancouver","latitude":49.260807350088,"longitude":-123.24291229248,"country":"ca","regions":[]},{"identifier":"westvan","name":"West
+        Vancouver","name_long":null,"time_zone":"America\/Vancouver","latitude":49.350716906844,"longitude":-123.20031911653,"country":"ca","regions":[]},{"identifier":"yaletown","name":"Yaletown","name_long":null,"time_zone":"America\/Vancouver","latitude":49.274321713942,"longitude":-123.12105744711,"country":"us","regions":[]}]},{"identifier":"victoria","name":"Victoria","name_long":"Victoria,
+        BC","time_zone":"America\/Vancouver","latitude":48.4284207,"longitude":-123.3656444,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.victoria","ios_app_application_id":861375208,"android_app_application_id":"com.tatlowpark.streetfood.victoria","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.victoria","ios_app_url":"https:\/\/apps.apple.com\/app\/id861375208","example_location":{"address":"Government
+        St & Yates St","latitude":48.426634,"longitude":-123.367461},"regions":[{"identifier":"csq","name":"Centennial
+        Square","name_long":null,"time_zone":"America\/Vancouver","latitude":48.42885382031,"longitude":-123.3654999733,"country":"ca","regions":[]},{"identifier":"rbcm","name":"Royal
+        BC Museum","name_long":null,"time_zone":"America\/Vancouver","latitude":48.419506114461,"longitude":-123.36719512939,"country":"ca","regions":[]}]},{"identifier":"washington","name":"Washington,
+        DC","name_long":null,"time_zone":"America\/New_York","latitude":38.9071923,"longitude":-77.0368707,"country":"us","example_location":{"address":"F
+        St NW & 9th St NW","latitude":38.897276,"longitude":-77.023692},"regions":[]},{"identifier":"whistler","name":"Whistler","name_long":"Whistler,
+        BC","time_zone":"America\/Vancouver","latitude":50.1163196,"longitude":-122.9573563,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.vancouver","ios_app_application_id":412748042,"android_app_application_id":"com.tatlowpark.streetfood.vancouver","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.vancouver","ios_app_url":"https:\/\/apps.apple.com\/app\/id412748042","example_location":{"address":"Village
+        Gate Blvd & Gate Way Dr","latitude":50.116032,"longitude":-122.955799},"regions":[]},{"identifier":"wichita","name":"Wichita","name_long":"Wichita,
+        KS","time_zone":"America\/Chicago","latitude":37.730172578897,"longitude":-97.347412109375,"country":"us","example_location":{"address":"S
+        Broadway & E Lewis St","latitude":37.681122,"longitude":-97.335546},"regions":[]},{"identifier":"winnipeg","name":"Winnipeg","name_long":"Winnipeg,
+        MB","time_zone":"America\/Winnipeg","latitude":49.895136,"longitude":-97.1383744,"country":"ca","example_location":{"address":"Portage
+        Ave & Main St","latitude":49.894534,"longitude":-97.142612},"regions":[]},{"identifier":"yarmouth","name":"Yarmouth","name_long":"Yarmouth,
+        NS","time_zone":"Canada\/Atlantic","latitude":43.8374576,"longitude":-66.117382,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.halifax","ios_app_application_id":846676460,"android_app_application_id":"com.tatlowpark.streetfood.halifax","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.halifax","ios_app_url":"https:\/\/apps.apple.com\/app\/id846676460","regions":[]}]'
+  recorded_at: Mon, 17 May 2021 13:53:24 GMT
+recorded_with: VCR 6.0.0

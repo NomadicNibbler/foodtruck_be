@@ -69,7 +69,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    faker (2.17.0)
+    faker (2.18.0)
       i18n (>= 1.6, < 2)
     faraday (1.4.1)
       faraday-excon (~> 1.1)
@@ -80,6 +80,8 @@ GEM
     faraday-excon (1.1.0)
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.1.0)
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     fast_jsonapi (1.5)
       activesupport (>= 4.2)
     ffi (1.15.0)
@@ -215,6 +217,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   faraday
+  faraday_middleware
   fast_jsonapi
   figaro
   json

@@ -76,7 +76,15 @@ RSpec.configure do |config|
 end
 
 VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.cassette_library_dir = "#{::Rails.root}/spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
   config.filter_sensitive_data('<COORD_KEY>') { ENV['COORD_KEY'] }
+  config.filter_sensitive_data('<GOOGLE_MAPS_API_KEY>') { ENV['GOOGLE_MAPS_API_KEY'] }
+  config.allow_http_connections_when_no_cassette = true
+  config.configure_rspec_metadata!
+  config.ignore_localhost = true
+end
+
+def parse(response)
+  JSON.parse(response.body, symbolize_names: true)
 end
