@@ -9,6 +9,7 @@ class DistanceService
     end
     # unpack and check for invalid query, currently returning a high number to not make invalid region nearest
     data = parse(response)
+    # data[:status] == 'INVALID_REQUEST'
     if data[:rows].first[:elements].first[:status] == 'ZERO_RESULTS' || data[:rows].first[:elements].first[:status] == 'NOT_FOUND'
       return 100000
     else

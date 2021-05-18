@@ -12,7 +12,6 @@ class FoodTruckService
   #   connection.get("/1.1/vendors/#{vendor_identifier}")
   # end
 
-
   private
 
   def self.connection

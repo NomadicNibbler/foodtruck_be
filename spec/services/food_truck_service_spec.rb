@@ -2,28 +2,23 @@ require "rails_helper"
 
 RSpec.describe "Food_truck_service_api" do
   describe "class methods" do
-    it "returns all the possible regions" do
+    it "returns all the possible regions", :vcr do
       data = FoodTruckService.get_regions
       expect(data.status).to eq(200)
-      trucks = parse(data)
+      regions = parse(data)
 
-      # expect(trucks).to be_successful?
-      expect(trucks).to be_an(Array)
-      expect(trucks.count).to eq(77)
-      expect(trucks.first).to be_a(Hash)
-      expect(trucks.first[:identifier]).to eq('abbotsford')
-      expect(trucks.first[:latitude]).to eq(49.0504377)
-      expect(trucks.first[:longitude]).to eq(-122.3044697)
-      expect(trucks.first[:name]).to eq("Abbotsford")
+      expect(regions).to be_an(Array)
+      expect(regions.count).to eq(77)
+      expect(regions.first).to be_a(Hash)
+      expect(regions.first[:identifier]).to eq('abbotsford')
+      expect(regions.first[:latitude]).to eq(49.0504377)
+      expect(regions.first[:longitude]).to eq(-122.3044697)
+      expect(regions.first[:name]).to eq("Abbotsford")
     end
 
-    it "when given a location it returns all the food trucks in the area" do
+    it "when given a location it returns all the food trucks in the area", :vcr do
       region_identifier = 'vancouver'
-      data = FoodTruckService.get_schedules_by_city(region_identifier)
-      expect(data.status).to eq(200)
-
-      trucks = parse(data)[:vendors]
-      # expect(data).to be_successful?
+      trucks = FoodTruckService.get_schedules_by_city(region_identifier)
 
       expect(trucks.first[1]).to be_a(Hash)
       expect(trucks.first[1][:description_short]).to eq("Authentic, author gourmet Mexican made with the finest ingredients hand picked.")
@@ -39,40 +34,25 @@ RSpec.describe "Food_truck_service_api" do
       expect(trucks.first[1][:payment_methods]).to eq(["cash", "credit_card", "debit_card", "apple_pay"])
       expect(trucks.first[1][:images][:logo_small]).to eq("https://cdn.streetfoodapp.com/images/arturos-to-go/logo/1.90w.png")
       expect(trucks.first[1][:open]).to be_an(Array)
-      expect(trucks.first[1][:open].length).to eq(5)
+      expect(trucks.first[1][:open].length).to eq(6)
       expect(trucks.first[1][:open].first.keys).to eq([:start, :end, :display, :updated, :latitude, :longitude])
     end
-
-    # it "when given a location it returns all the food trucks in the area" do
-    #   truck_id = 65830487
-    #   truck_data = FoodTruckService.get_truck_info(truck_id)
-    #
-    #   expect(truck_data.first).to be_a(Truck)
-    #   expect(truck_data.first[:id]).to eq(truck_id)
-    #   expect(truck_data.first[:lat]).to eq(1)
-    #   expect(truck_data.first[:long]).to eq(1)
-    #   expect(truck_data.first[:name]).to eq("some name")
-    #   expect(truck_data.first[:description]).to eq("super sick food truck")
-    #   expect(truck_data.first[:display]).to eq("4th and Icon st.")
-    #   expect(truck_data.first[:payment_methods]).to eq(['cash', 'applepay', 'credit'])
-    #   expect(truck_data.first[:logo_small]).to eq("some_name_logo_small.png")
-    # end
   end
 
   describe "sad paths" do
-    it "returns a 404 for integers" do
+    xit "returns a 404 for integers" do
       trucks = FoodTruckService.get_schedules_by_city("2345")
 
       expect(trucks.status).to eq(404)
     end
 
-    it "returns a 404 for invalid" do
+    xit "returns a 404 for invalid" do
       trucks = FoodTruckService.get_schedules_by_city("hello")
 
       expect(trucks.status).to eq(404)
     end
 
-    it "returns a 404 if not a valid city" do
+    xit "returns a 404 if not a valid city" do
       trucks = FoodTruckService.get_schedules_by_city("worcester")
 
       expect(trucks.status).to eq(404)

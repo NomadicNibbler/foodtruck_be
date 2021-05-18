@@ -15,10 +15,8 @@ RSpec.describe 'distance service' do
       origin = "40.6655101,-73.89188969999998"
       destination = "40.6905615,-100000000"
       response = DistanceService.get_distance(origin, destination)
-      expect(response.status).to eq(200)
-      response = parse(response)
 
-      expect(response[:rows].first[:elements].first[:status]).to eq("NOT_FOUND")
+      expect(response).to eq(100000)
     end
   end
 end

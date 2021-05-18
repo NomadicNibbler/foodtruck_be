@@ -1,0 +1,88 @@
+"arturos-to-go": {
+            "description_short": "Authentic, author gourmet Mexican made with the finest ingredients hand picked.",
+            "identifier": "arturos-to-go",
+            "name": "arturosmexico2go",
+            "region": "vancouver",
+            "url": "arturos2go.com",
+            "phone": "(604) 202-4043",
+            "email": "info@arturos2go.com",
+            "twitter": "arturomexico2go",
+            "facebook": "arturosmexico2go",
+            "instagram": "arturos2go",
+            "takeout_url": null,
+            "delivery_url": null,
+            "description": "Arturo's unique recipes are a fusion of Spanish and traditional Mexican. Clean, simple and healthy Mexican food. Only 3 people prepare the food we serve to our clients, from the local produce and local butcher, there is not third parties when it comes to prepare our dishes. We closely follow Health Authority guidances and protocols to operate our business. We have been serving take out food at open spaces since 2010, and we will continue doing it, safety is our priority.",
+            "rating": 1612,
+            "payment_methods": [
+                "cash",
+                "credit_card",
+                "debit_card",
+                "apple_pay"
+            ],
+            "promoted": true,
+            "last": {
+                "time": 1621366200,
+                "display": "Howe St & W Cordova St",
+                "latitude": 49.2864661,
+                "longitude": -123.113481
+            },
+            "images": {
+                "logo": "https://cdn.streetfoodapp.com/images/arturos-to-go/logo/1.90w@2x.png",
+                "logo_small": "https://cdn.streetfoodapp.com/images/arturos-to-go/logo/1.90w.png",
+                "header": [
+                    "https://cdn.streetfoodapp.com/images/arturos-to-go/header/1-1.jpg"
+                ]
+            },
+            "catering": null,
+            "open": [
+                {
+                    "start": 1621362600,
+                    "end": 1621374300,
+                    "display": "Howe St & W Cordova St",
+                    "updated": 1581359129,
+                    "latitude": 49.2864661,
+                    "longitude": -123.113481
+                },
+                {
+                    "start": 1621449000,
+                    "end": 1621460700,
+                    "display": "Howe St & W Cordova St",
+                    "updated": 1581359129,
+                    "latitude": 49.2864661,
+                    "longitude": -123.113481
+                },
+                {
+                    "start": 1621535400,
+                    "end": 1621547100,
+                    "display": "Howe St & W Cordova St",
+                    "updated": 1581359129,
+                    "latitude": 49.2864661,
+                    "longitude": -123.113481
+                },
+                {
+                    "start": 1621621800,
+                    "end": 1621633500,
+                    "display": "Howe St & W Cordova St",
+                    "updated": 1581359129,
+                    "latitude": 49.2864661,
+                    "longitude": -123.113481
+                },
+                {
+                    "start": 1621881000,
+                    "end": 1621890000,
+                    "display": "577 Great Northern Way (west side of the building)",
+                    "updated": 1581359105,
+                    "latitude": 49.26731833,
+                    "longitude": -123.0905152
+                },
+                {
+                    "start": 1621967400,
+                    "end": 1621979100,
+                    "display": "Howe St & W Cordova St",
+                    "updated": 1581359129,
+                    "latitude": 49.2864661,
+                    "longitude": -123.113481
+                }
+            ],
+            "open_updated": 1581359129,
+            "rank": 8

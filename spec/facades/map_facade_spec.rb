@@ -2,19 +2,18 @@ require "rails_helper"
 
 RSpec.describe "map_facade_spec" do
   describe "class methods" do
-    it "#get_trucks" do
+    it "#get_trucks", :vcr do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       trucks = MapFacade.get_trucks(address)
 
       expect(trucks).to be_an(Array)
       expect(trucks.first).to be_a(TruckLite)
       expect(trucks.count).to eq(96) #45
-      expect(trucks.first.id).to eq(23)
-      expect(trucks.first.latitude).to eq(53.23657)
-      expect(trucks.first.longitude).to eq(24.36676)
-      expect(trucks.first.name).to eq("Abbotsford")
-      expect(trucks.first.distance).to eq(1.4)
-      expect(trucks.first.logo_small).to eq("small_logo.png")
+      expect(trucks.first.lat).to eq(49.2864661)
+      expect(trucks.first.long).to eq(-123.113481)
+      expect(trucks.first.name).to eq("arturosmexico2go")
+      expect(trucks.first.distance).to eq(0.8)
+      expect(trucks.first.logo_small).to eq("https://cdn.streetfoodapp.com/images/arturos-to-go/logo/1.90w.png")
     end
 
     it "#address_to_lat_long", :vcr do
@@ -24,8 +23,9 @@ RSpec.describe "map_facade_spec" do
     end
 
     it "#find_closest_region", :vcr do
-      lat_long = {:lat=>49.2797, :long=>-123.11556}
-      region = MapFacade.find_closest_region(lat_long)
+      lat_long = {:lat=>49.2797, :lng=>-123.11556}
+      formatted_lat_long = "#{lat_long[:lat]},#{lat_long[:lng]}"
+      region = MapFacade.find_closest_region(formatted_lat_long)
 
       expect(region).to eq("vancouver")
     end
@@ -51,7 +51,6 @@ RSpec.describe "map_facade_spec" do
       truck_data = FoodTruckService.get_schedules_by_city('vancouver')
       trucks = MapFacade.make_trucks(truck_data)
       trucks_with_distances = MapFacade.assign_distances(trucks, user_location)
-
       expect(trucks_with_distances.length).to eq(96)
       expect(trucks_with_distances.first.distance).to eq(0.8)
       expect(trucks_with_distances.last.distance).to eq(4.8)

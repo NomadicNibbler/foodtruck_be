@@ -4,9 +4,8 @@ class TruckLite
               :name,
               :distance,
               :logo_small
-              # :id
+
   def initialize(data)
-    # @id = data[:id]
     @name = data[:name]
     @lat = add_latitude(data)
     @long = add_longitude(data)
