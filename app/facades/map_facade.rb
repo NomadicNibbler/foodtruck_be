@@ -40,21 +40,44 @@ class MapFacade
   end
 
   def self.assign_distances(trucks, user_location)
+    trucks_with_distance = []
+
     #create a new array of trucks that have lat long data
     #concatenate all the lat_longs into on string seperated by pipes
     #parse the data into an array
     #add teh distance for that index in the return value to the corresponding truck at that index
     valid_trucks = validate_trucks(trucks)
-    valid_truck_lat_long_string = get_string(valid_trucks)
+    # valid_truck_lat_long_string = get_string(valid_trucks)
+    # chunked_trucks = valid_trucks.chunk(23)
+    chunked_trucks = valid_trucks.each_slice(20).to_a
+    chunked_trucks.each do |chunk|
+      string = get_string(chunk)
+      distance = DistanceService.get_distance(user_location, string)
+      parsed_distance = distance_parser(distance)
+      trucks_with_distance << append_truck_distance(chunk, parsed_distance)
+    end
+    trucks_with_distance.flatten
     require "pry"; binding.pry
-    trucks.each do |truck|
-      if truck.lat == "no last location available" || truck.long == "no last location available"
-        truck.add_distance(1000)
-      else
-        truck_loc = "#{truck.lat},#{truck.long}"
-        distance = DistanceService.get_distance(truck_loc, user_location)
-        truck.add_distance(distance)
+    # trucks.each do |truck|
+      # if truck.lat == "no last location available" || truck.long == "no last location available"
+      #   truck.add_distance(1000)
+      # else
+      #   truck_loc = "#{truck.lat},#{truck.long}"
+      #   distance = DistanceService.get_distance(truck_loc, user_location)
+      #   truck.add_distance(distance)
+      # end
+
+  end
+
+  def self.distance_parser(raw_distance_data)
+    if raw_distance_data[:rows].first[:elements].first[:status] == 'ZERO_RESULTS' || raw_distance_data[:rows].first[:elements].first[:status] == 'NOT_FOUND'
+      return 100000
+    else
+      new_array = raw_distance_data[:rows].first[:elements].map do |truck_distance_data|
+        truck_distance_data[:distance][:text].delete_suffix(' mi').gsub(',', '').to_f
       end
+      # distance_in_text = raw_distance_data[:rows].first[:elements].first[:distance][:text]
+      # distance = ((distance_in_text.delete_suffix(' mi')).gsub(',', '')).to_f
     end
   end
 
@@ -66,12 +89,16 @@ class MapFacade
 
   def self.get_string(valid_trucks)
     string = ""
-    require "pry"; binding.pry
     valid_trucks.each do |truck|
       string = "#{string}|#{truck.lat},#{truck.long}"
     end
     string[1..-1]
-     require "pry"; binding.pry
+  end
+
+  def self.append_truck_distance(truck_array, truck_distance)
+    truck_array.each_with_index do |truck, index|
+      truck.add_distance(truck_distance[index])
+    end
   end
 
   def self.get_distance(truck_location, user_location, miles=false)
