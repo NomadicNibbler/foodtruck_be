@@ -75,7 +75,13 @@ RSpec.describe "map_facade_spec" do
     xit "#append_truck_distance" do
     end
 
-    xit "#get_distance" do 
+    xit "#get_distance" do
+    end
+
+    xit "#return_data" do
+    end
+
+    xit "#format_truck_data" do 
     end
 
   end
