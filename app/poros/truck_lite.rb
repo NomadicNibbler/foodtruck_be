@@ -1,16 +1,28 @@
-class TruckLite
+class Truck
   attr_reader :lat,
               :long,
               :name,
               :distance,
-              :logo_small
+              :logo,
+              :payment_methods,
+              :website,
+              :socials,
+              :phone,
+              :description,
+              :display
 
   def initialize(data)
     @name = data[:name]
     @lat = add_latitude(data)
     @long = add_longitude(data)
     @distance = 0
-    @logo_small = add_image(data)
+    @logo = add_image(data)
+    @payment_methods = nil
+    @website = data[:url]
+    @socials = get_socials(data)
+    @phone = data[:phone]
+    @description = data[:description]
+    @display = get_display(data)
   end
 
   def add_distance(distance)
@@ -18,10 +30,10 @@ class TruckLite
   end
 
   def add_image(data)
-    if data[:images] && data[:images][:logo_small]
-      @logo_small = data[:images][:logo_small]
+    if data[:images] && data[:images][:logo]
+      @logo = data[:images][:logo]
     else
-      @logo_small = 'no image available'
+      @logo = 'no image available'
     end
   end
 
@@ -40,4 +52,11 @@ class TruckLite
       @long = 'no last location available'
     end
   end
+
+  def get_socials(data)
+  end
+
+  def get_display(data)
+  end
+
 end

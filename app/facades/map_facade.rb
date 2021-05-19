@@ -27,7 +27,7 @@ class MapFacade
 
   def self.make_trucks(truck_data)
     truck_data.map do |data|
-      TruckLite.new(data[1])
+      Truck.new(data[1])
     end
   end
 
