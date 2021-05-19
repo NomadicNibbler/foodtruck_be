@@ -62,6 +62,22 @@ RSpec.describe "map_facade_spec" do
       expect(trucks_with_distances.first.distance).to eq(0.8)
       expect(trucks_with_distances.last.distance).to eq(4.8)
     end
+
+    xit "#distance_parser" do
+    end
+
+    xit "#validate_trucks" do
+    end
+
+    xit "#get_string" do
+    end
+
+    xit "#append_truck_distance" do
+    end
+
+    xit "#get_distance" do 
+    end
+
   end
 
   describe "sad paths" do
