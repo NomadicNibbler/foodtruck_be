@@ -5,7 +5,6 @@ RSpec.describe "map_facade_spec" do
     it "#get_trucks", :vcr do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       trucks = MapFacade.get_trucks(address)
-
       expect(trucks).to be_an(Array)
       expect(trucks.first).to be_a(TruckLite)
       expect(trucks.count).to eq(96) #45
@@ -22,7 +21,15 @@ RSpec.describe "map_facade_spec" do
       expect(lat_long).to eq({:lat=>49.2797, :lng=>-123.11556})
     end
 
-    it "#find_closest_region", :vcr do
+    it "#get_distance" do
+      truck_location = '49.28976,-123.12556'
+      user_location = '41.379736,-123.11556'
+
+      distance = MapFacade.get_distance(truck_location, user_location)
+      expect(distance).to eq(879.5548835183268)
+    end
+
+    it "#find_closest_region" do
       lat_long = {:lat=>49.2797, :lng=>-123.11556}
       formatted_lat_long = "#{lat_long[:lat]},#{lat_long[:lng]}"
       region = MapFacade.find_closest_region(formatted_lat_long)
