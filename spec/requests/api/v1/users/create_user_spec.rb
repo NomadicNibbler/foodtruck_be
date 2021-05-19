@@ -7,14 +7,15 @@ describe "Users API" do
                     username: 'tsnieuwen',
                     first_name: 'Tommy',
                     last_name: 'Pickles',
-                    address: '123 Broadway',
-                    city: 'Denver',
-                    zipcode: '12345'
+                    address: '898 W Broadway',
+                    city: 'Vancouver',
+                    zipcode: 'V5Z 1J8'
                     }
 
     post "/api/v1/users", params: user_params
+    require "pry"; binding.pry
     user = JSON.parse(response.body, symbolize_names: true)
-
+    require "pry"; binding.pry
     expect(response).to be_successful
     expect(response.status).to eq(201)
     expect(user).to be_a(Hash)
@@ -58,9 +59,9 @@ describe "Users API" do
                     username: 'tsnieuwen',
                     first_name: 'Tommy',
                     last_name: 'Pickles',
-                    address: '123 Broadway',
-                    city: 'Denver',
-                    zipcode: '12345'
+                    address: '4 Yawkey Way',
+                    city: 'Boston',
+                    zipcode: '02215'
                     }
 
     existing_user = User.create(user_params_existing)
