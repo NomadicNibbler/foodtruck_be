@@ -49,6 +49,7 @@ GET 'api/v1/trucks'
       "trucks": [
         {
           "description": "text about truck",
+          "description_short": "a brief description",
           "display": "Howe St & W Cordova St",
           "distance": "6.3",
           "logo": "some_logo.png",
@@ -62,6 +63,7 @@ GET 'api/v1/trucks'
         },
         {
           "description": "text about truck",
+          "description_short": "a brief description",
           "display": "Wynkoop St & Wazee St",
           "distance": "2.4",
           "logo": "some_other_logo.png",
