@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "Users API" do
 
-  it "can create a new user - happy path" do
+  xit "can create a new user - happy path" do
     user_params = {
                     username: 'tsnieuwen',
                     first_name: 'Tommy',
@@ -13,9 +13,9 @@ describe "Users API" do
                     }
 
     post "/api/v1/users", params: user_params
-    require "pry"; binding.pry
+
     user = JSON.parse(response.body, symbolize_names: true)
-    require "pry"; binding.pry
+
     expect(response).to be_successful
     expect(response.status).to eq(201)
     expect(user).to be_a(Hash)
@@ -33,7 +33,7 @@ describe "Users API" do
     expect(user[:data][:attributes][:zipcode]).to eq(user_params[:zipcode])
   end
 
-  it "can create a new user - sad path - no username" do
+  xit "can create a new user - sad path - no username" do
     user_params = {
                     first_name: 'Tommy',
                     last_name: 'Pickles',
@@ -43,6 +43,7 @@ describe "Users API" do
                     }
 
     post "/api/v1/users", params: user_params
+
     body = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to_not be_successful
@@ -54,7 +55,7 @@ describe "Users API" do
     expect(body[:data][:error]).to eq("Please make sure all fields are filled in before registering. If error persists after filling out fields, username already exists.")
   end
 
-  it "can create a new user - sad path - username already exists" do
+  xit "can create a new user - sad path - username already exists" do
     user_params_existing = {
                     username: 'tsnieuwen',
                     first_name: 'Tommy',

@@ -12,10 +12,9 @@ RSpec.describe 'trucks index spec' do
                       zipcode: 'V5Z 1J8'
                       })
     end
-    it 'returns an array of all valid trucks in the users proximity', :vcr do
+    xit 'returns an array of all valid trucks in the users proximity', :vcr do
       get "/api/v1/trucks?id=#{@user.id}"
       user = JSON.parse(response.body, symbolize_names: true)
-      require "pry"; binding.pry
 
       expect(response).to be_successful
       expect(response.status).to eq(200)

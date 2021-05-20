@@ -110,36 +110,36 @@ class MapFacade
     d = 6371 * c * (miles ? 1 / 1.6 : 1)
   end
 
-  def self.return_data(user)
-    user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
-    x = OpenStruct.new({
-      id: nil,
-      username: user.username,
-      first_name: user.first_name,
-      last_name: user.last_name,
-      address: user.address,
-      city: user.city,
-      zipcode: user.zipcode,
-      trucks: format_truck_data(user_address)
-      })
-  end
+  # def self.return_data(user)
+  #   user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
+  #   x = OpenStruct.new({
+  #     id: nil,
+  #     username: user.username,
+  #     first_name: user.first_name,
+  #     last_name: user.last_name,
+  #     address: user.address,
+  #     city: user.city,
+  #     zipcode: user.zipcode,
+  #     trucks: format_truck_data(user_address)
+  #     })
+  # end
 
-  def self.format_truck_data(user_address)
-    x = get_trucks(user_address)
-      x.map do |truck|
-        new_hash = Hash.new
-        new_hash[:description] = truck.description
-        new_hash[:display] = truck.display
-        new_hash[:distance] = truck.distance
-        new_hash[:lat] = truck.lat
-        new_hash[:logo] = truck.logo
-        new_hash[:long] = truck.long
-        new_hash[:name] = truck.name
-        new_hash[:payment_methods] = truck.payment_methods
-        new_hash[:phone] = truck.phone
-        new_hash[:socials] = truck.socials
-        new_hash[:website] = truck.website
-        new_hash
-      end
-  end
+  # def self.format_truck_data(user_address)
+  #   x = get_trucks(user_address)
+  #     x.map do |truck|
+  #       new_hash = Hash.new
+  #       new_hash[:description] = truck.description
+  #       new_hash[:display] = truck.display
+  #       new_hash[:distance] = truck.distance
+  #       new_hash[:lat] = truck.lat
+  #       new_hash[:logo] = truck.logo
+  #       new_hash[:long] = truck.long
+  #       new_hash[:name] = truck.name
+  #       new_hash[:payment_methods] = truck.payment_methods
+  #       new_hash[:phone] = truck.phone
+  #       new_hash[:socials] = truck.socials
+  #       new_hash[:website] = truck.website
+  #       new_hash
+  #     end
+  # end
 end
