@@ -141,4 +141,9 @@ class MapFacade
   #       new_hash
   #     end
   # end
+  private
+
+  def self.parse(response)
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
