@@ -13,6 +13,7 @@ RSpec.describe 'trucks index spec' do
                       })
     end
     xit 'returns an array of all valid trucks in the users proximity', :vcr do
+      puts @user.id
       get "/api/v1/trucks?id=#{@user.id}"
       user = JSON.parse(response.body, symbolize_names: true)
 
