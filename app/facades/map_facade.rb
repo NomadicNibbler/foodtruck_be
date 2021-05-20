@@ -7,6 +7,7 @@ class MapFacade
     trucks = make_trucks(truck_data)
     trucks_with_distances = assign_distances(trucks, formatted_lat_long)
     trucks_with_distances
+    require "pry"; binding.pry
   end
 
   def self.address_to_lat_long(address)
@@ -68,7 +69,7 @@ class MapFacade
 
   def self.validate_trucks(trucks)
     trucks.reject do |truck|
-      truck.lat == "no last location available" || truck.long == "no last location available"
+      truck.lat == "no last location available" || truck.long == "no last location available" || truck.recent_data == false
     end
   end
 

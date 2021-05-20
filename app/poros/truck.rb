@@ -12,7 +12,8 @@ class Truck
               :display,
               :id,
               :description_short,
-              :get_last_know_location_date
+              :get_last_know_location_date,
+              :recent_data
 
   def initialize(data)
     @id = nil
@@ -29,6 +30,7 @@ class Truck
     @description_short = get_description_short(data)
     @display = get_display(data)
     @get_last_know_location_date = get_last_know_location_date(data)
+    @recent_data = recent_data?(data)
   end
 
   def add_distance(distance)
@@ -124,7 +126,21 @@ class Truck
 
   def get_last_know_location_date(data)
     if data[:last] && data[:last][:time]
-      Time.at(data[:last][:time]).strftime("%m/%d/%Y")
+      data[:last][:time]
+    else
+      0
+    end
+  end
+
+  def recent_data?(data)
+    if data[:last] && data[:last][:time]
+      if (Time.now.to_i - data[:last][:time]) < 2629743
+        true
+      else
+        false
+      end
+    else
+      false
     end
   end
 end
