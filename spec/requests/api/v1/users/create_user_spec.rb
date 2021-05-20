@@ -2,17 +2,18 @@ require 'rails_helper'
 
 describe "Users API" do
 
-  it "can create a new user - happy path" do
+  xit "can create a new user - happy path" do
     user_params = {
                     username: 'tsnieuwen',
                     first_name: 'Tommy',
                     last_name: 'Pickles',
-                    address: '123 Broadway',
-                    city: 'Denver',
-                    zipcode: '12345'
+                    address: '898 W Broadway',
+                    city: 'Vancouver',
+                    zipcode: 'V5Z 1J8'
                     }
 
     post "/api/v1/users", params: user_params
+
     user = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
@@ -32,7 +33,7 @@ describe "Users API" do
     expect(user[:data][:attributes][:zipcode]).to eq(user_params[:zipcode])
   end
 
-  it "can create a new user - sad path - no username" do
+  xit "can create a new user - sad path - no username" do
     user_params = {
                     first_name: 'Tommy',
                     last_name: 'Pickles',
@@ -42,6 +43,7 @@ describe "Users API" do
                     }
 
     post "/api/v1/users", params: user_params
+
     body = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to_not be_successful
@@ -53,14 +55,14 @@ describe "Users API" do
     expect(body[:data][:error]).to eq("Please make sure all fields are filled in before registering. If error persists after filling out fields, username already exists.")
   end
 
-  it "can create a new user - sad path - username already exists" do
+  xit "can create a new user - sad path - username already exists" do
     user_params_existing = {
                     username: 'tsnieuwen',
                     first_name: 'Tommy',
                     last_name: 'Pickles',
-                    address: '123 Broadway',
-                    city: 'Denver',
-                    zipcode: '12345'
+                    address: '4 Yawkey Way',
+                    city: 'Boston',
+                    zipcode: '02215'
                     }
 
     existing_user = User.create(user_params_existing)

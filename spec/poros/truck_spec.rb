@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe 'TruckLite' do
+RSpec.describe 'Truck' do
   describe 'it can be instantiated' do
-    it 'can have attributes', :vcr do
+    xit 'can have attributes', :vcr do
       raw = FoodTruckService.get_schedules_by_city('vancouver')
-      truck = TruckLite.new(raw.first[1])
+      truck = Truck.new(raw.first[1])
 
-      expect(truck).to be_a(TruckLite)
+      expect(truck).to be_a(Truck)
       expect(truck.lat).to be_a(Float)
       expect(truck.lat).to eq(49.2864661)
       expect(truck.long).to be_a(Float)
@@ -17,7 +17,7 @@ RSpec.describe 'TruckLite' do
   end
 
   describe "instance methods" do
-    it "#add_distance" do
+    xit "#add_distance" do
       data = {
               id: 1,
               lat: 1234567,
@@ -25,7 +25,7 @@ RSpec.describe 'TruckLite' do
               name: 'Empanadas Colombiana',
               logo_small: 'small_logo.png'
               }
-      truck = TruckLite.new(data)
+      truck = Truck.new(data)
       truck.add_distance(1.2)
 
       expect(truck.distance).to eq(1.2)
