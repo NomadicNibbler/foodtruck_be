@@ -79,32 +79,40 @@ RSpec.describe "map_facade_spec" do
       expect(results.first.recent_data).to eq(true)
     end
 
-    xit "#get_string", :vcr do
+    it "#get_string", :vcr do
       user_location = '49.2797,-123.11556'
       truck_data = FoodTruckService.get_schedules_by_city('vancouver')
       trucks = MapFacade.make_trucks(truck_data)
-      trucks_with_distances = MapFacade.assign_distances(trucks, user_location)
-      expect(trucks_with_distances.length).to eq(96)
-      expect(trucks_with_distances.first.distance).to eq(0.8)
-      expect(trucks_with_distances.last.distance).to eq(4.8)
+      valids = MapFacade.validate_trucks(trucks).first(20)
+      string = MapFacade.get_string(valids)
+
+      expect(string).to be_a(String)
+      expect(string.length).to eq(512)
+      expect(string[0]).to_not eq("|")
+      expect(string[0]).to eq("4")
+      expect(string.last).to eq("9")
     end
 
-    xit "#append_truck_distance" do
+    it "#append_truck_distance", :vcr do
       user_location = '49.2797,-123.11556'
       truck_data = FoodTruckService.get_schedules_by_city('vancouver')
       trucks = MapFacade.make_trucks(truck_data)
-      trucks_with_distances = MapFacade.assign_distances(trucks, user_location)
-      expect(trucks_with_distances.length).to eq(96)
-      expect(trucks_with_distances.first.distance).to eq(0.8)
-      expect(trucks_with_distances.last.distance).to eq(4.8)
+      valid = [MapFacade.validate_trucks(trucks).first]
+      string = MapFacade.get_string(valid)
+      distance = DistanceService.get_distance(user_location, string)
+      parsed_distance = MapFacade.distance_parser(distance)
+      with_distance = MapFacade.append_truck_distance(valid, parsed_distance)
+
+      expect(with_distance.first).to be_a(Truck)
+      expect(with_distance.first.distance).to eq(0.7)
     end
 
-    xit "#get_distance" do
+    it "#get_distance", :vcr do
       truck_location = '49.28976,-123.12556'
-      user_location = '41.379736,-123.11556'
+      user_location = '41.379736,-123.16566'
 
       distance = MapFacade.get_distance(truck_location, user_location)
-      expect(distance).to eq(879.5548835183268)
+      expect(distance).to eq(879.5600873672587)
     end
   end
 
