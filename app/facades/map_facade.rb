@@ -108,19 +108,22 @@ class MapFacade
     d = 6371 * c * (miles ? 1 / 1.6 : 1)
   end
 
-  # def self.return_data(user)
-  #   user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
-  #   x = OpenStruct.new({
-  #     id: nil,
-  #     username: user.username,
-  #     first_name: user.first_name,
-  #     last_name: user.last_name,
-  #     address: user.address,
-  #     city: user.city,
-  #     zipcode: user.zipcode,
-  #     trucks: format_truck_data(user_address)
-  #     })
-  # end
+  def self.return_data(user)
+    user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
+    user_coords = address_to_lat_long(user_address)
+    x = OpenStruct.new({
+      id: nil,
+      username: user.username,
+      first_name: user.first_name,
+      last_name: user.last_name,
+      address: user.address,
+      city: user.city,
+      zipcode: user.zipcode,
+      lat: user_coords[:lat],
+      long: user_coords[:lng]
+      # trucks: format_truck_data(user_address)
+      })
+  end
 
   # def self.format_truck_data(user_address)
   #   x = get_trucks(user_address)
