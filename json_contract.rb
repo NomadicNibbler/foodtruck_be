@@ -11,10 +11,14 @@ params: { "first": "name", "last": "name" }
     "type": "users",
     "id": "1",
     "attributes": {
+      "username": "beeps"
       "first_name": "Beep",
       "last_name": "Beeperson",
       "lat": "45.84858",
-      "long": "69.37472"
+      "long": "69.37472",
+      "address": "",
+      "city": "",
+      "zip": ""
     }
   }
 }
@@ -29,10 +33,30 @@ params: { "username": "some_beep", "first_name": "Beep", "last_name": "Beeperson
     "type": "users",
     "id": "1",
     "attributes": {
+      "username": "beeps"
       "first_name": "Beep",
       "last_name": "Beeperson",
       "lat": "45.84858",
       "long": "69.37472",
+      "address": "",
+      "city": "",
+      "zip": ""
+    }
+  }
+}
+
+# change address
+PATCH 'api/v1/users'
+params: { "id": "1", "street": "22 Hillcrest Dr", "city": "lander", "zip": "82520" }
+
+{
+  "data": {
+    "type": "users",
+    "id": "1",
+    "attributes": {
+      "status": "user updated successfully",
+      "lat": "34.1244",
+      "long": "-123.23545"
     }
   }
 }
@@ -40,7 +64,7 @@ params: { "username": "some_beep", "first_name": "Beep", "last_name": "Beeperson
 # truck show view
 
 GET 'api/v1/trucks'
-
+# params: {id}
 {
   "data": {
     "type": "trucks",
