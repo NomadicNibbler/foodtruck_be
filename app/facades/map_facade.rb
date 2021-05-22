@@ -52,7 +52,6 @@ class MapFacade
       trucks_with_distance << append_truck_distance(chunk, parsed_distance)
     end
     trucks_with_distance.flatten
-
   end
 
   def self.distance_parser(raw_distance_data)
