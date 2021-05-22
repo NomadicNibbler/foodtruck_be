@@ -2,17 +2,17 @@ require "rails_helper"
 
 RSpec.describe "map_facade_spec" do
   describe "class methods" do
-    xit "#get_trucks", :vcr do
+    it "#get_trucks", :vcr do
       address = 'Library Square, 345 Robson St, Vancouver, BC V6B 6B3, Canada'
       trucks = MapFacade.get_trucks(address)
       expect(trucks).to be_an(Array)
       expect(trucks.first).to be_a(Truck)
-      expect(trucks.count).to eq(96) #45
+      expect(trucks.count).to eq(67)
       expect(trucks.first.lat).to eq(49.2864661)
       expect(trucks.first.long).to eq(-123.113481)
       expect(trucks.first.name).to eq("arturosmexico2go")
-      expect(trucks.first.distance).to eq(0.8)
-      expect(trucks.first.logo_small).to eq("https://cdn.streetfoodapp.com/images/arturos-to-go/logo/1.90w.png")
+      expect(trucks.first.distance).to eq(0.7)
+      expect(trucks.first.logo).to eq("https://cdn.streetfoodapp.com/images/arturos-to-go/logo/1.90w@2x.png")
     end
 
     it "#address_to_lat_long", :vcr do
