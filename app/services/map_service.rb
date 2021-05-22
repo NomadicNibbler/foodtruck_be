@@ -6,8 +6,11 @@ class MapService
       req.params['location'] = address
     end
     data = JSON.parse(res.body, symbolize_names: true)
-
-    data[:results][0][:locations][0][:latLng]
+    out = data[:results][0][:locations][0][:latLng]
+    redis ||= Redis.new
+    redis.set address, out
+    redis.save
+    return out
   end
 
   def self.coordinate_connection

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'the map service' do
   describe 'class methods' do
     it '#get_coords', :vcr do
-      address = '1724 hillcrest dr lander'
+      address = '898 W Broadway Vancouver V5Z 1J8'
       res = MapService.get_coords(address)
 
       expect(res).to be_a(Hash)
