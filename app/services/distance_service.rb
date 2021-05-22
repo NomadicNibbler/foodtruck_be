@@ -7,7 +7,6 @@ class DistanceService
       f.params['destinations'] = destination
       f.params['units'] = 'imperial'
     end
-    # unpack and check for invalid query, currently returning a high number to not make invalid region nearest
     data = parse(response)
   end
 
