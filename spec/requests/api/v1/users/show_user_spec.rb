@@ -7,13 +7,14 @@ describe "Users API" do
                     username: 'tsnieuwen',
                     first_name: 'Tommy',
                     last_name: 'Pickles',
-                    address: '123 Broadway',
-                    city: 'Denver',
-                    zipcode: '12345'
+                    address: '898 W Broadway',
+                    city: 'Vancouver',
+                    zipcode: 'V5Z 1J8'
                     }
 
-    User.create(user_params_existing)
-
+    user = User.create(user_params_existing)
+    full_address = "#{user.address}, #{user.city}, #{user.zipcode}"
+    coords = MapService.get_coords(full_address)
     login_params = {username: 'tsnieuwen'}
 
     get "api/v1/users", params: login_params
