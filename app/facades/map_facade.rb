@@ -1,7 +1,6 @@
 class MapFacade
   def self.get_trucks(address) # + radius
-    redis ||= Redis.new
-    lat_long = eval(redis.get address) || address_to_lat_long(address)
+    lat_long = address_to_lat_long(address)
     formatted_lat_long = "#{lat_long[:lat]},#{lat_long[:lng]}"
     region = find_closest_region(formatted_lat_long)
     truck_data = FoodTruckService.get_schedules_by_city(region)
@@ -11,7 +10,10 @@ class MapFacade
   end
 
   def self.address_to_lat_long(address)
-    MapService.get_coords(address)
+    require "pry"; binding.pry
+    Rails.cache.fetch "address: #{address}", expires_in: 1.week do
+      MapService.get_coords(address)
+    end
   end
 
   def self.find_closest_region(user_location)
