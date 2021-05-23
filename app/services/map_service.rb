@@ -7,8 +7,7 @@ class MapService
     end
     data = JSON.parse(res.body, symbolize_names: true)
     out = data[:results][0][:locations][0][:latLng]
-    redis ||= Redis.new
-    redis.set address, out
+    redis.set coords, out
     redis.save
     return out
   end
