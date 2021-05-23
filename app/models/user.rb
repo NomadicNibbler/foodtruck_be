@@ -6,4 +6,14 @@ class User < ApplicationRecord
   validates :address, presence: true
   validates :city, presence: true
   validates :zipcode, presence: true
+
+  def latitude
+    coords = MapService.get_coords("#{address}, #{city}, #{zipcode}")
+    coords[:lat]
+  end
+
+  def longitude
+    coords = MapService.get_coords("#{address}, #{city}, #{zipcode}")
+    coords[:lng]
+  end
 end
