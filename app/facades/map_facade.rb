@@ -109,17 +109,17 @@ class MapFacade
   end
 
   # def self.return_data(user)
-  #   user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
-  #   x = OpenStruct.new({
-  #     id: nil,
-  #     username: user.username,
-  #     first_name: user.first_name,
-  #     last_name: user.last_name,
-  #     address: user.address,
-  #     city: user.city,
-  #     zipcode: user.zipcode,
-  #     trucks: format_truck_data(user_address)
-  #     })
+    # user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
+    # x = OpenStruct.new({
+      # id: nil,
+      # username: user.username,
+      # first_name: user.first_name,
+      # last_name: user.last_name,
+      # address: user.address,
+      # city: user.city,
+      # zipcode: user.zipcode,
+      # trucks: format_truck_data(user_address)
+      # })
   # end
 
   # def self.format_truck_data(user_address)
