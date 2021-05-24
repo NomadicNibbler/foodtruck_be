@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'the session create' do
   describe 'happy path' do
     before :each do
-      @user = create(:user)
+      @user = create(:user, username: "tommy")
     end
     it 'returns user data when valid user logs in' do
       post "/api/v1/sessions?username=#{@user.username}"
