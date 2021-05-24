@@ -273,12 +273,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-<<<<<<< HEAD
-<<<<<<< HEAD
    2.2.18
-=======
-   2.2.16
->>>>>>> a718006... Add known config to use redis as cache store
-=======
-   2.2.17
->>>>>>> b2335bc... add some redis gems and get basic functionality for redis working in map facade
