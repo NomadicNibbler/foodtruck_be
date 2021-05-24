@@ -7,7 +7,7 @@ RSpec.describe "map_facade_spec" do
       trucks = MapFacade.get_trucks(address)
       expect(trucks).to be_an(Array)
       expect(trucks.first).to be_a(Truck)
-      expect(trucks.count).to eq(67)
+      expect(trucks.count).to eq(69)
       expect(trucks.first.lat).to eq(49.2864661)
       expect(trucks.first.long).to eq(-123.113481)
       expect(trucks.first.name).to eq("arturosmexico2go")

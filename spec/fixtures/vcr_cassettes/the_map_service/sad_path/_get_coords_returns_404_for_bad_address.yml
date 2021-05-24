@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?key=<COORD_KEY>&location=898%20W%20Breadway%20Vancouver%20V5Z%201J8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 24 May 2021 19:24:32 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '7860'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Mon, 24 May 2021 19:24:32 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=E683421F15645240448FA79A31AFF0E2; Path=/; HttpOnly; Secure
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+      Strict-Transport-Security:
+      - max-age=0
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"898
+        W Breadway Vancouver V5Z 1J8"},"locations":[{"street":"898 W Broadway","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z
+        1J8","geocodeQualityCode":"P1BBA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r46355279|p204240215|n63201388","unknownInput":"","type":"s","latLng":{"lat":49.263345,"lng":-123.123713},"displayLatLng":{"lat":49.263169,"lng":-123.123715},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.263345,-123.123713|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-1063368425"},{"street":"[1000
+        - 1016] W Broadway","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V6H","geocodeQualityCode":"B3BBC","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"L","linkId":"rnr9539671|i66397906","unknownInput":"","type":"s","latLng":{"lat":49.26334,"lng":-123.126907},"displayLatLng":{"lat":49.26314,"lng":-123.126913},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.26334,-123.126907|marker-sm-50318A-2&scalebar=true&zoom=15&rand=46590953"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z
+        1J8","geocodeQualityCode":"Z3XXA","geocodeQuality":"ZIP_EXTENDED","dragPoint":false,"sideOfStreet":"N","linkId":"304904585","unknownInput":"","type":"s","latLng":{"lat":49.263232,"lng":-123.123892},"displayLatLng":{"lat":49.263232,"lng":-123.123892},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.263232,-123.123892|marker-sm-50318A-3&scalebar=true&zoom=15&rand=1616871148"},{"street":"898
+        W 9th Ave, eadway","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z
+        1J8","geocodeQualityCode":"P1CBA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r46355279|p204240215|n63201389","unknownInput":"","type":"s","latLng":{"lat":49.263345,"lng":-123.123713},"displayLatLng":{"lat":49.263169,"lng":-123.123715},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.263345,-123.123713|marker-sm-50318A-4&scalebar=true&zoom=15&rand=-318882367"},{"street":"898
+        44th Ave W, ead","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z","geocodeQualityCode":"L1CBA","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr228242|i66693058","unknownInput":"","type":"s","latLng":{"lat":49.231116,"lng":-123.126732},"displayLatLng":{"lat":49.230916,"lng":-123.126738},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.231116,-123.126732|marker-sm-50318A-5&scalebar=true&zoom=15&rand=-818892234"},{"street":"898
+        43rd Ave W, ead","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z","geocodeQualityCode":"L1CBA","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr218629|i66462680","unknownInput":"","type":"s","latLng":{"lat":49.232052,"lng":-123.12719},"displayLatLng":{"lat":49.231853,"lng":-123.127198},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.232052,-123.12719|marker-sm-50318A-6&scalebar=true&zoom=15&rand=1118095240"},{"street":"898
+        46th Ave W, ead","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z","geocodeQualityCode":"L1CBA","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr231055|i67853997","unknownInput":"","type":"s","latLng":{"lat":49.229234,"lng":-123.126272},"displayLatLng":{"lat":49.229034,"lng":-123.126279},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.229234,-123.126272|marker-sm-50318A-7&scalebar=true&zoom=15&rand=-1841896253"},{"street":"898
+        37th Ave W, ead","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z
+        2L5","geocodeQualityCode":"P1CBB","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r46350490|p203864229|n63199549","unknownInput":"","type":"s","latLng":{"lat":49.237566,"lng":-123.125457},"displayLatLng":{"lat":49.237308,"lng":-123.125477},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.237566,-123.125457|marker-sm-50318A-8&scalebar=true&zoom=15&rand=-740999666"},{"street":"898
+        17th Ave W, ead","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z
+        1V2","geocodeQualityCode":"P1CBB","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r47366754|p204473792|n64596569","unknownInput":"","type":"s","latLng":{"lat":49.256193,"lng":-123.124216},"displayLatLng":{"lat":49.255997,"lng":-123.124225},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.256193,-123.124216|marker-sm-50318A-9&scalebar=true&zoom=15&rand=812197015"},{"street":"898
+        W King Edward Ave, y","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z
+        2E1","geocodeQualityCode":"L1CBB","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr9827469|i67807071","unknownInput":"","type":"s","latLng":{"lat":49.249111,"lng":-123.124707},"displayLatLng":{"lat":49.248911,"lng":-123.124713},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.249111,-123.124707|marker-sm-50318A-10&scalebar=true&zoom=15&rand=1102272671"}]}]}'
+  recorded_at: Mon, 24 May 2021 19:24:31 GMT
+recorded_with: VCR 6.0.0

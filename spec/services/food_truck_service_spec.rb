@@ -39,23 +39,23 @@ RSpec.describe "Food_truck_service_api" do
     end
   end
 
-  describe "sad paths" do
-    xit "returns a 404 for integers" do
-      trucks = FoodTruckService.get_schedules_by_city("2345")
-
-      expect(trucks.status).to eq(404)
-    end
-
-    xit "returns a 404 for invalid" do
-      trucks = FoodTruckService.get_schedules_by_city("hello")
-
-      expect(trucks.status).to eq(404)
-    end
-
-    xit "returns a 404 if not a valid city" do
-      trucks = FoodTruckService.get_schedules_by_city("worcester")
-
-      expect(trucks.status).to eq(404)
-    end
-  end
+  # describe "sad paths" do
+  #   xit "returns a 404 for integers" do
+  #     trucks = FoodTruckService.get_schedules_by_city("2345")
+  #     require "pry"; binding.pry
+  #     expect(trucks.status).to eq(404)
+  #   end
+  #
+  #   xit "returns a 404 for invalid" do
+  #     trucks = FoodTruckService.get_schedules_by_city("hello")
+  # 
+  #     expect(trucks.status).to eq(404)
+  #   end
+  #
+  #   it "returns a 404 if not a valid city" do
+  #     trucks = FoodTruckService.get_schedules_by_city("worcester")
+  #
+  #     expect(trucks.status).to eq(404)
+  #   end
+  # end
 end

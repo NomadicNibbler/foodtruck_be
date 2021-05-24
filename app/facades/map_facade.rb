@@ -13,11 +13,9 @@ class MapFacade
     redis = Redis.current
     redis_result = redis.get "address: #{address}"
     if redis_result
-      require "pry"; binding.pry
-      redis_result
+      eval(redis_result)
     else
       MapService.get_coords(address)
-      require "pry"; binding.pry
     end
     # Rails.cache.fetch "address: #{address}", expires_in: 1.week do
     # end

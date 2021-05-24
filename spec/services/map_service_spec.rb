@@ -12,7 +12,15 @@ RSpec.describe 'the map service' do
       expect(res[:lng]).to be_a(Float)
     end
   end
-  describe 'sad path' do
 
+  describe 'sad path' do
+    it '#get_coords returns 404 for bad address', :vcr do
+      address = '898 W Breadway Vancouver V5Z 1J8'
+      result = MapService.get_coords(address)
+      expect(res).to be_a(Hash)
+      expect(res.keys).to eq([:lat, :lng])
+      expect(res[:lat]).to be_a(Float)
+      expect(res[:lng]).to be_a(Float)
+    end
   end
 end

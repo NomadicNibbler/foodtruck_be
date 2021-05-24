@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?key=<COORD_KEY>&location=898%20W%20Broadway%20V5Z%201J8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 24 May 2021 19:21:51 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '7765'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Mon, 24 May 2021 19:21:51 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=A043644DA88B7A0D5891BE414407BA63; Path=/; HttpOnly; Secure
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+      Strict-Transport-Security:
+      - max-age=0
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"898
+        W Broadway V5Z 1J8"},"locations":[{"street":"898 W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Woodmere","adminArea5Type":"City","adminArea4":"Nassau","adminArea4Type":"County","adminArea3":"NY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"11598-2044","geocodeQualityCode":"P1AXC","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r32114308|p50096737|n43279960","unknownInput":"","type":"s","latLng":{"lat":40.633548,"lng":-73.714308},"displayLatLng":{"lat":40.633642,"lng":-73.714393},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=40.633548,-73.714308|marker-sm-50318A-1&scalebar=true&zoom=15&rand=1011577045"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Franklin","adminArea5Type":"City","adminArea4":"Howard","adminArea4Type":"County","adminArea3":"MO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"65250","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr9538819|i37049547","unknownInput":"","type":"s","latLng":{"lat":39.015109,"lng":-92.751697},"displayLatLng":{"lat":39.015284,"lng":-92.751795},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=39.015109,-92.751697|marker-sm-50318A-2&scalebar=true&zoom=15&rand=-712394970"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Virden","adminArea5Type":"City","adminArea4":"Macoupin","adminArea4Type":"County","adminArea3":"IL","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"62690-9760","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr9539541|i18381401","unknownInput":"","type":"s","latLng":{"lat":39.504959,"lng":-89.781742},"displayLatLng":{"lat":39.504759,"lng":-89.781735},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=39.504959,-89.781742|marker-sm-50318A-3&scalebar=true&zoom=15&rand=-1751505740"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Monticello","adminArea5Type":"City","adminArea4":"White","adminArea4Type":"County","adminArea3":"IN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"47960-2011","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr9538896|i21695319","unknownInput":"","type":"s","latLng":{"lat":40.744994,"lng":-86.775572},"displayLatLng":{"lat":40.745194,"lng":-86.775571},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=40.744994,-86.775572|marker-sm-50318A-4&scalebar=true&zoom=15&rand=1649128057"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Monticello","adminArea5Type":"City","adminArea4":"Sullivan","adminArea4Type":"County","adminArea3":"NY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"12701-7109","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"R","linkId":"rnr9538923|i41388278","unknownInput":"","type":"s","latLng":{"lat":41.663065,"lng":-74.705838},"displayLatLng":{"lat":41.663229,"lng":-74.705724},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=41.663065,-74.705838|marker-sm-50318A-5&scalebar=true&zoom=15&rand=-97394619"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Barry","adminArea5Type":"City","adminArea4":"Pike","adminArea4Type":"County","adminArea3":"IL","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"62312","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"R","linkId":"rnr9538864|i19079987","unknownInput":"","type":"s","latLng":{"lat":39.621833,"lng":-90.994803},"displayLatLng":{"lat":39.622033,"lng":-90.994804},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=39.621833,-90.994803|marker-sm-50318A-6&scalebar=true&zoom=15&rand=-1219046672"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Browns
+        Valley","adminArea5Type":"City","adminArea4":"Traverse","adminArea4Type":"County","adminArea3":"MN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"56219-9662","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr9542373|i31555891","unknownInput":"","type":"s","latLng":{"lat":45.595318,"lng":-96.841536},"displayLatLng":{"lat":45.595518,"lng":-96.841533},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=45.595318,-96.841536|marker-sm-50318A-7&scalebar=true&zoom=15&rand=-1238021278"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Louisville","adminArea5Type":"City","adminArea4":"Jefferson","adminArea4Type":"County","adminArea3":"KY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"40202-2218","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"L","linkId":"rnr9539587|i27702977","unknownInput":"","type":"s","latLng":{"lat":38.246847,"lng":-85.766394},"displayLatLng":{"lat":38.246649,"lng":-85.76642},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=38.246847,-85.766394|marker-sm-50318A-8&scalebar=true&zoom=15&rand=79393137"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Lincoln","adminArea5Type":"City","adminArea4":"Penobscot","adminArea4Type":"County","adminArea3":"ME","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"04457-4120","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"R","linkId":"rnr9538947|i25910309","unknownInput":"","type":"s","latLng":{"lat":45.333299,"lng":-68.581837},"displayLatLng":{"lat":45.333127,"lng":-68.581735},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=45.333299,-68.581837|marker-sm-50318A-9&scalebar=true&zoom=15&rand=-1584218719"},{"street":"898
+        W Broadway, V5Z","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Leoti","adminArea5Type":"City","adminArea4":"Wichita","adminArea4Type":"County","adminArea3":"KS","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"67861","geocodeQualityCode":"L1AXC","geocodeQuality":"ADDRESS","dragPoint":false,"sideOfStreet":"R","linkId":"rnr9539382|i23134525","unknownInput":"","type":"s","latLng":{"lat":38.481372,"lng":-101.367476},"displayLatLng":{"lat":38.481572,"lng":-101.367478},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=38.481372,-101.367476|marker-sm-50318A-10&scalebar=true&zoom=15&rand=750071561"}]}]}'
+  recorded_at: Mon, 24 May 2021 19:21:50 GMT
+recorded_with: VCR 6.0.0
