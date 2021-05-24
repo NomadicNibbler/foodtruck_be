@@ -7,11 +7,11 @@ RSpec.describe "map_facade_spec" do
       trucks = MapFacade.get_trucks(address)
       expect(trucks).to be_an(Array)
       expect(trucks.first).to be_a(Truck)
-      expect(trucks.count).to eq(67)
-      expect(trucks.first.lat).to eq(49.2864661)
-      expect(trucks.first.long).to eq(-123.113481)
+      expect(trucks.count).to eq(69)
+      expect(trucks.first.lat).to eq(49.26731833)
+      expect(trucks.first.long).to eq(-123.0905152)
       expect(trucks.first.name).to eq("arturosmexico2go")
-      expect(trucks.first.distance).to eq(0.7)
+      expect(trucks.first.distance).to eq(1.8)
       expect(trucks.first.logo).to eq("https://cdn.streetfoodapp.com/images/arturos-to-go/logo/1.90w@2x.png")
     end
 

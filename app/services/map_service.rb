@@ -7,7 +7,6 @@ class MapService
     end
     data = JSON.parse(res.body, symbolize_names: true)
     out = data[:results][0][:locations][0][:latLng]
-    require "pry"; binding.pry
     return out
   end
 

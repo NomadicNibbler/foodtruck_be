@@ -10,10 +10,7 @@ class MapFacade
   end
 
   def self.address_to_lat_long(address)
-    require "pry"; binding.pry
-    Rails.cache.fetch "address: #{address}", expires_in: 1.week do
-      MapService.get_coords(address)
-    end
+    MapService.get_coords(address)
   end
 
   def self.find_closest_region(user_location)
