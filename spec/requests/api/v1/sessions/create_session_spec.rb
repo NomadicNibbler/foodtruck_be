@@ -17,7 +17,7 @@ RSpec.describe 'the session create' do
       expect(user[:data].keys).to eq([:id, :type, :attributes])
       expect(user[:data][:type]).to eq("user")
       expect(user[:data][:attributes]).to be_a(Hash)
-      expect(user[:data][:attributes].keys).to eq([:username, :first_name, :last_name, :address, :city, :zipcode])
+      expect(user[:data][:attributes].keys).to eq([:username, :first_name, :last_name, :address, :city, :zipcode, :lat, :long])
       expect(user[:data][:attributes][:username]).to eq(@user.username)
       expect(user[:data][:attributes][:first_name]).to eq(@user.first_name)
       expect(user[:data][:attributes][:last_name]).to eq(@user.last_name)
