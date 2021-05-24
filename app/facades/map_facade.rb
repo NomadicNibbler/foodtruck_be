@@ -73,7 +73,6 @@ class MapFacade
       new_array = raw_distance_data[:rows].first[:elements].map do |truck_distance_data|
         truck_distance_data[:distance][:text].delete_suffix(' mi').gsub(',', '').to_f
       end
-
     end
   end
 

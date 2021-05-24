@@ -10,7 +10,7 @@ class Api::V1::TrucksController < ApplicationController
         render json: serialized_data, status: 200
       end
     else
-      render json: {data: { error: "Please enter a valid username."}}, status: 400
+      render json: {data: { error: "ID not found."}}, status: 400
     end
   end
 

@@ -29,7 +29,7 @@ class Truck
     @description = get_description(data)
     @description_short = get_description_short(data)
     @display = get_display(data)
-    @get_last_know_location_date = get_last_know_location_date(data)
+    # @get_last_know_location_date = get_last_know_location_date(data)
     @recent_data = recent_data?(data)
   end
 
@@ -124,13 +124,13 @@ class Truck
     end
   end
 
-  def get_last_know_location_date(data)
-    if data[:last] && data[:last][:time]
-      data[:last][:time]
-    else
-      0
-    end
-  end
+  # def get_last_know_location_date(data)
+    # if data[:last] && data[:last][:time]
+      # data[:last][:time]
+    # else
+      # 0
+    # end
+  # end
 
   def recent_data?(data)
     if data[:last] && data[:last][:time]
