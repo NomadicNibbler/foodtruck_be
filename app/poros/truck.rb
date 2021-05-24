@@ -63,10 +63,11 @@ class Truck
   end
 
   def get_payments(data)
+    require "pry"; binding.pry
     if data[:payment_methods]
       data[:payment_methods]
     else
-      ''
+      []
     end
   end
 
