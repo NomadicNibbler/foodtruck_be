@@ -50,7 +50,7 @@ RSpec.describe "map_facade_spec" do
       truck_data = FoodTruckService.get_schedules_by_city('vancouver')
       trucks = MapFacade.make_trucks(truck_data)
       trucks_with_distances = MapFacade.assign_distances(trucks, user_location)
-      expect(trucks_with_distances.length).to eq(66)
+      expect(trucks_with_distances.length).to eq(68)
       expect(trucks_with_distances.first.distance).to eq(0.7)
       expect(trucks_with_distances.last.distance).to eq(4.8)
     end
@@ -72,7 +72,7 @@ RSpec.describe "map_facade_spec" do
       results = MapFacade.validate_trucks(trucks)
 
       expect(results).to be_an(Array)
-      expect(results.length).to eq(66)
+      expect(results.length).to eq(65)
       expect(results.first).to be_a(Truck)
       expect(results.first.lat).to_not eq(nil)
       expect(results.first.long).to_not eq(nil)
