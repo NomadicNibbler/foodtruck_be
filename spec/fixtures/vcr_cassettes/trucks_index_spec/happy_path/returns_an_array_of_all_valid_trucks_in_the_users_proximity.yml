@@ -2,6 +2,63 @@
 http_interactions:
 - request:
     method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<COORD_KEY>&location=898%20W%20Broadway,%20Vancouver,%20V5Z%201J8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 May 2021 21:32:02 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1106'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Tue, 25 May 2021 21:32:02 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=65CAE1EC7BD6A4F7E6ED991614DF0C96; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"898
+        W Broadway, Vancouver, V5Z 1J8"},"locations":[{"street":"898 W Broadway","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z
+        1J8","geocodeQualityCode":"P1ABA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r46355279|p204240215|n63201388","unknownInput":"","type":"s","latLng":{"lat":49.263345,"lng":-123.123713},"displayLatLng":{"lat":49.263169,"lng":-123.123715},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.263345,-123.123713|marker-sm-50318A-1&scalebar=true&zoom=15&rand=998725524"}]}]}'
+  recorded_at: Tue, 25 May 2021 21:32:02 GMT
+- request:
+    method: get
     uri: http://data.streetfoodapp.com/1.1/regions
     body:
       encoding: US-ASCII
@@ -19,7 +76,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 25 May 2021 21:19:07 GMT
+      - Tue, 25 May 2021 21:32:34 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Location:
@@ -38,7 +95,7 @@ http_interactions:
         <h1>Moved Permanently</h1>
         <p>The document has moved <a href="http://data.streetfoodapp.com/1.1/regions/">here</a>.</p>
         </body></html>
-  recorded_at: Tue, 25 May 2021 21:18:36 GMT
+  recorded_at: Tue, 25 May 2021 21:32:02 GMT
 - request:
     method: get
     uri: http://data.streetfoodapp.com/1.1/regions/
@@ -58,13 +115,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 May 2021 21:19:07 GMT
+      - Tue, 25 May 2021 21:32:34 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Last-Modified:
-      - Tue, 25 May 2021 21:19:05 GMT
+      - Tue, 25 May 2021 21:32:06 GMT
       Etag:
-      - '"c31f-5c32e13744460"'
+      - '"c31f-5c32e41f52ca0"'
       Accept-Ranges:
       - bytes
       Content-Length:
@@ -311,7 +368,7 @@ http_interactions:
         MB","time_zone":"America\/Winnipeg","latitude":49.895136,"longitude":-97.1383744,"country":"ca","example_location":{"address":"Portage
         Ave & Main St","latitude":49.894534,"longitude":-97.142612},"regions":[]},{"identifier":"yarmouth","name":"Yarmouth","name_long":"Yarmouth,
         NS","time_zone":"Canada\/Atlantic","latitude":43.8374576,"longitude":-66.117382,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.halifax","ios_app_application_id":846676460,"android_app_application_id":"com.tatlowpark.streetfood.halifax","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.halifax","ios_app_url":"https:\/\/apps.apple.com\/app\/id846676460","regions":[]}]'
-  recorded_at: Tue, 25 May 2021 21:18:36 GMT
+  recorded_at: Tue, 25 May 2021 21:32:03 GMT
 - request:
     method: get
     uri: http://data.streetfoodapp.com/1.1/schedule/vancouver
@@ -331,7 +388,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 25 May 2021 21:19:07 GMT
+      - Tue, 25 May 2021 21:32:34 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Location:
@@ -350,7 +407,7 @@ http_interactions:
         <h1>Moved Permanently</h1>
         <p>The document has moved <a href="http://data.streetfoodapp.com/1.1/schedule/vancouver/">here</a>.</p>
         </body></html>
-  recorded_at: Tue, 25 May 2021 21:18:36 GMT
+  recorded_at: Tue, 25 May 2021 21:32:03 GMT
 - request:
     method: get
     uri: http://data.streetfoodapp.com/1.1/schedule/vancouver/
@@ -370,26 +427,26 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 May 2021 21:19:07 GMT
+      - Tue, 25 May 2021 21:32:34 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Last-Modified:
-      - Tue, 25 May 2021 21:18:21 GMT
+      - Tue, 25 May 2021 21:32:21 GMT
       Etag:
-      - '"223fc-5c32e10c8cba0"'
+      - '"22352-5c32e42e604e0"'
       Accept-Ranges:
       - bytes
       Content-Length:
-      - '140284'
+      - '140114'
       Cache-Control:
       - max-age=300
       Content-Type:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"metadata":{"ads":[{"banner":{"identifier":"frying-pan","image_url":"https:\/\/cdn.streetfoodapp.com\/images\/frying-pan\/logo\/90w.png","image_url_2x":"https:\/\/cdn.streetfoodapp.com\/images\/frying-pan\/logo\/90w@2x.png","title":"Frying
-        Pan ","subtitle":"One thing in mind, to serve the best fried chicken in the
-        world! I believe we will bring a new taste to Vancouver.","show_vendor":"frying-pan"}}],"new":["the-brownie-bakers","bistrotvan","crack-on","babas-house","invito-coffee","little-devils","wingerz","crema-ice-cream","street-dogs-smash-burgers","rice-soup"],"regions":[{"identifier":"vancouver","name":"Vancouver","time_zone":"America\/Vancouver","example_location":[],"regions":[{"identifier":"armoury-district","name":"Armoury
+      string: '{"metadata":{"ads":[{"banner":{"identifier":"nami","image_url":"https:\/\/cdn.streetfoodapp.com\/images\/nami\/logo\/90w.png","image_url_2x":"https:\/\/cdn.streetfoodapp.com\/images\/nami\/logo\/90w@2x.png","title":"NaM\u00ec
+        Vietnamese","subtitle":"NaM\u00ec food-cart brings the authentic flavours
+        of Vietnamese cuisine to the heart of downtown Vancouver.","show_vendor":"nami"}}],"new":["the-brownie-bakers","bistrotvan","crack-on","babas-house","invito-coffee","little-devils","wingerz","crema-ice-cream","street-dogs-smash-burgers","rice-soup"],"regions":[{"identifier":"vancouver","name":"Vancouver","time_zone":"America\/Vancouver","example_location":[],"regions":[{"identifier":"armoury-district","name":"Armoury
         District","time_zone":"America\/Vancouver"},{"identifier":"btc","name":"Broadway
         Tech Centre","time_zone":"America\/Vancouver"},{"identifier":"cityhall","name":"City
         Hall","time_zone":"America\/Vancouver"},{"identifier":"commercial","name":"Commercial
@@ -642,8 +699,7 @@ http_interactions:
         Broadway & Granville St.","latitude":49.26349539,"longitude":-123.138811},"catering":null,"open":[],"open_updated":null,"rank":109},"indish":{"description_short":null,"identifier":"indish","name":"Indish","region":"vancouver","url":"indishfoods.ca","phone":null,"email":"indishfoodsinc@gmail.com","twitter":"indishfoodtruck","facebook":null,"instagram":"indishfoodtruck","takeout_url":null,"delivery_url":null,"description":"Indian
         inspired food served with a modern flair. Rice bowls, paratha wraps, poutine,
         samosas, and other mouthwatering street food specials!","rating":92,"payment_methods":["cash","credit_card","debit_card"],"promoted":false,"last":{"time":1621963800,"display":"Louis
-        Brier Home & Hospital","latitude":49.23448726,"longitude":-123.12925651},"catering":null,"open":[{"start":1621963800,"end":1621978200,"display":"Louis
-        Brier Home & Hospital","updated":1621235428,"latitude":49.23448726,"longitude":-123.12925651},{"start":1622052900,"end":1622063700,"display":"Lush
+        Brier Home & Hospital","latitude":49.23448726,"longitude":-123.12925651},"catering":null,"open":[{"start":1622052900,"end":1622063700,"display":"Lush
         HQ","updated":1621235465,"latitude":49.20725113,"longitude":-123.11655966},{"start":1622304000,"end":1622322000,"display":"Trout
         Lake Farmer''s Market","updated":1619817350,"latitude":49.25800572,"longitude":-123.06175435}],"open_updated":1621235465,"rank":72},"invito-coffee":{"description_short":null,"identifier":"invito-coffee","name":"Invito
         Coffee","region":"vancouver","url":"invitocoffee.com","phone":"(778) 994-4974","email":"yaroslav@invitocoffee.com","twitter":"InvitoCoffee","facebook":null,"instagram":null,"takeout_url":null,"delivery_url":null,"description":"We''re
@@ -1207,7 +1263,7 @@ http_interactions:
         NW Marine Dr, Vancouver","updated":1621744299,"latitude":49.27453474,"longitude":-123.20811728},{"start":1622397600,"end":1622426400,"display":"4486
         NW Marine Dr, Vancouver, BC V6R 1B6 \u30ab\u30ca\u30c0","updated":1621955358,"latitude":49.27453286,"longitude":-123.208165},{"start":1622487600,"end":1622512800,"display":"2200
         W 41st Ave, Vancouver","updated":1621955399,"latitude":49.23453928,"longitude":-123.15875761}],"open_updated":1621965600,"rank":37}}}'
-  recorded_at: Tue, 25 May 2021 21:18:36 GMT
+  recorded_at: Tue, 25 May 2021 21:32:03 GMT
 - request:
     method: get
     uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=49.2864661,-123.113481%7C49.69994555,-123.15221197%7C49.27886813,-122.84993495%7C49.26417329,-123.09393872%7C49.27132919,-123.10942297%7C49.17857616,-122.78028753%7C49.27650777,-123.21323457%7C49.27149749,-123.10957127%7C49.1634374,-122.96999053%7C49.70012139,-123.15214401%7C49.2682247,-123.15516618%7C49.26269174,-123.16155208%7C49.26164995,-123.1619584%7C49.28185146,-123.07869564%7C49.27865786,-122.84869889%7C49.32604495,-123.15103622%7C49.25536793,-123.065479%7C49.2637766,-123.13261084%7C49.27854708,-122.85101473%7C49.26232943,-123.16152156&key=<GOOGLE_MAPS_API_KEY>&origins=49.263345,-123.123713&units=imperial
@@ -1229,7 +1285,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 25 May 2021 21:18:36 GMT
+      - Tue, 25 May 2021 21:32:03 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1247,7 +1303,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=99
+      - gfet4t7; dur=162
       Alt-Svc:
       - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -1508,7 +1564,7 @@ http_interactions:
            ],
            "status" : "OK"
         }
-  recorded_at: Tue, 25 May 2021 21:18:36 GMT
+  recorded_at: Tue, 25 May 2021 21:32:03 GMT
 - request:
     method: get
     uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=49.26466141,-123.09917283%7C49.23314999,-123.11662618%7C49.26349539,-123.138811%7C49.23448726,-123.12925651%7C49.2536883,-122.84486465%7C49.28243991,-123.12439424%7C49.28893425,-122.79298926%7C49.20651025,-123.03072177%7C49.26423588,-123.10811617%7C49.26321517,-123.1179451%7C49.20593917,-123.03086374%7C49.02174757,-122.80739973%7C49.27388502,-123.12148456%7C49.27866264,-122.84884859%7C49.25712235,-123.10614051%7C49.20974149,-123.09082576%7C49.26353854,-123.13373144%7C49.09927309,-122.49492319%7C49.31739079,-123.088293%7C49.23150167,-123.09065944&key=<GOOGLE_MAPS_API_KEY>&origins=49.263345,-123.123713&units=imperial
@@ -1530,7 +1586,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 25 May 2021 21:18:36 GMT
+      - Tue, 25 May 2021 21:32:03 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1548,7 +1604,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=97
+      - gfet4t7; dur=109
       Alt-Svc:
       - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -1809,7 +1865,7 @@ http_interactions:
            ],
            "status" : "OK"
         }
-  recorded_at: Tue, 25 May 2021 21:18:36 GMT
+  recorded_at: Tue, 25 May 2021 21:32:03 GMT
 - request:
     method: get
     uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=49.17441484,-123.07073996%7C49.27865511,-122.84883671%7C49.24451217,-123.09003635%7C49.17859396,-122.7801698%7C49.20585932,-123.03072169%7C49.2638422,-123.10809469%7C49.26213629,-123.16025024%7C49.27679611,-123.07123185%7C49.28616836,-123.14332854%7C49.26969999,-123.13534398%7C49.17855553,-122.78037061%7C49.2786078,-122.8543138%7C49.25669516,-123.10572688%7C49.27252699,-123.07783658%7C49.27253576,-123.07781109%7C49.27887315,-122.84737401%7C49.27857287,-122.85323458%7C49.24334402,-123.10490082%7C49.69995832,-123.15222979%7C49.25977085,-123.04421575&key=<GOOGLE_MAPS_API_KEY>&origins=49.263345,-123.123713&units=imperial
@@ -1831,7 +1887,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 25 May 2021 21:18:37 GMT
+      - Tue, 25 May 2021 21:32:03 GMT
       Pragma:
       - no-cache
       Expires:
@@ -1849,7 +1905,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=120
+      - gfet4t7; dur=134
       Alt-Svc:
       - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -2110,7 +2166,7 @@ http_interactions:
            ],
            "status" : "OK"
         }
-  recorded_at: Tue, 25 May 2021 21:18:37 GMT
+  recorded_at: Tue, 25 May 2021 21:32:03 GMT
 - request:
     method: get
     uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=49.25472922,-123.12146339%7C49.73903605,-123.13362298%7C49.22044761,-122.59034468%7C49.28458375,-122.79204987%7C49.28677363,-123.11771223%7C49.08943695,-122.06629335%7C49.27140269,-123.10660322%7C49.23453928,-123.15875761&key=<GOOGLE_MAPS_API_KEY>&origins=49.263345,-123.123713&units=imperial
@@ -2132,7 +2188,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 25 May 2021 21:18:37 GMT
+      - Tue, 25 May 2021 21:32:04 GMT
       Pragma:
       - no-cache
       Expires:
@@ -2150,7 +2206,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Server-Timing:
-      - gfet4t7; dur=112
+      - gfet4t7; dur=111
       Alt-Svc:
       - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
         ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
@@ -2267,5 +2323,5 @@ http_interactions:
            ],
            "status" : "OK"
         }
-  recorded_at: Tue, 25 May 2021 21:18:37 GMT
+  recorded_at: Tue, 25 May 2021 21:32:04 GMT
 recorded_with: VCR 6.0.0

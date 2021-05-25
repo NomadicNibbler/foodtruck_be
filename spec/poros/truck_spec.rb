@@ -15,7 +15,7 @@ RSpec.describe 'Truck' do
       expect(truck.logo).to eq("https://cdn.streetfoodapp.com/images/arturos-to-go/logo/1.90w@2x.png")
       expect(truck.distance).to eq(0)
       expect(truck.payment_methods).to eq(["cash", "credit_card", "debit_card", "apple_pay"])
-      expect(truck.website).to eq('')
+      expect(truck.website).to eq('arturos2go.com')
       expect(truck.socials).to eq({:facebook => "arturosmexico2go",
                                    :instagram => "arturos2go",
                                    :twitter => "arturomexico2go"
@@ -23,7 +23,7 @@ RSpec.describe 'Truck' do
       expect(truck.phone).to eq("(604) 202-4043")
       # expect(truck.description).to eq("Arturo's unique recipes are a fusion of Spanish and traditional Mexican. Clean, simple and healthy M...ing take out food at open spaces since 2010, and we will continue doing it, safety is our priority.")
       expect(truck.description_short).to eq("Authentic, author gourmet Mexican made with the finest ingredients hand picked.")
-      expect(truck.display).to eq('')
+      expect(truck.display).to eq("Howe St & W Cordova St")
       expect(truck.id).to eq(nil)
       expect(truck.recent_data).to eq(true)
     end

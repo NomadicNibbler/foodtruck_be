@@ -28,18 +28,16 @@ RSpec.describe 'trucks index spec' do
       expect(trucks[:data][0][:attributes].keys).to eq([:lat, :long, :name, :distance, :logo, :payment_methods, :website, :socials, :phone, :description, :display, :description_short])
     end
   end
-  # describe 'sad path' do
-    # xit 'returns error json' do
-    #   get "/api/v1/trucks?id=zip"
-    #   body = JSON.parse(response.body, symbolize_names: true)
-    #   require "pry"; binding.pry
-    #   expect(response).to_not be_successful
-    #   expect(response.status).to eq(400)
-    #   expect(body).to be_a(Hash)
-    #   expect(body).to have_key(:data)
-    #   expect(body[:data]).to be_a(Hash)
-    #   expect(body[:data].keys).to eq([:error])
-    #   expect(body[:data][:error]).to eq("ID not found.")
-    # end
-  # end
+  describe 'sad path' do
+    it 'returns error json' do
+      get "/api/v1/trucks?id=zip"
+      body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+      expect(body).to be_a(Hash)
+      expect(body.keys).to eq([:error])
+      expect(body[:error]).to eq("Couldn't find User with 'id'=zip")
+    end
+  end
 end

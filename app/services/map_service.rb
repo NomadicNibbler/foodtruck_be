@@ -11,8 +11,8 @@ class MapService
       return "location not found"
     else
       out = data[:results][0][:locations][0][:latLng]
-      redis = Redis.current
-      redis.set("address: #{address}", out)
+      # redis = Redis.current
+      # redis.set("address: #{address}", out)
       return out
     end
   end

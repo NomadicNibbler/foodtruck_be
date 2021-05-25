@@ -71,8 +71,8 @@ class Truck
   end
 
   def get_website(data)
-    if data[:website]
-      data[:website]
+    if data[:url]
+      data[:url]
     else
       ''
     end
@@ -101,8 +101,8 @@ class Truck
   end
 
   def get_display(data)
-    if !data[:display].nil?
-      @display = data[:display]
+    if data[:last] && data[:last][:display]
+      @display = data[:last][:display]
     else
       @display = ''
     end
