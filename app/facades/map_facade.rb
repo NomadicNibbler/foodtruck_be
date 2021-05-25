@@ -1,16 +1,28 @@
 class MapFacade
   def self.get_trucks(address) # + radius
     lat_long = address_to_lat_long(address)
-    formatted_lat_long = "#{lat_long[:lat]},#{lat_long[:lng]}"
-    region = find_closest_region(formatted_lat_long)
-    truck_data = FoodTruckService.get_schedules_by_city(region)
-    trucks = make_trucks(truck_data)
-    trucks_with_distances = assign_distances(trucks, formatted_lat_long)
-    trucks_with_distances
+    if lat_long == "location not found"
+      lat_long
+    else
+      formatted_lat_long = "#{lat_long[:lat]},#{lat_long[:lng]}"
+      region = find_closest_region(formatted_lat_long)
+      truck_data = FoodTruckService.get_schedules_by_city(region)
+      trucks = make_trucks(truck_data)
+      trucks_with_distances = assign_distances(trucks, formatted_lat_long)
+      trucks_with_distances
+    end
   end
 
   def self.address_to_lat_long(address)
+    # redis = Redis.current
+    # redis_result = redis.get "address: #{address}"
+    # if redis_result
+      # eval(redis_result)
+    # else
     MapService.get_coords(address)
+    # end
+    # Rails.cache.fetch "address: #{address}", expires_in: 1.week do
+    # end
   end
 
   def self.find_closest_region(user_location)
@@ -61,7 +73,6 @@ class MapFacade
       new_array = raw_distance_data[:rows].first[:elements].map do |truck_distance_data|
         truck_distance_data[:distance][:text].delete_suffix(' mi').gsub(',', '').to_f
       end
-
     end
   end
 
@@ -109,17 +120,17 @@ class MapFacade
   end
 
   # def self.return_data(user)
-  #   user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
-  #   x = OpenStruct.new({
-  #     id: nil,
-  #     username: user.username,
-  #     first_name: user.first_name,
-  #     last_name: user.last_name,
-  #     address: user.address,
-  #     city: user.city,
-  #     zipcode: user.zipcode,
-  #     trucks: format_truck_data(user_address)
-  #     })
+    # user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
+    # x = OpenStruct.new({
+      # id: nil,
+      # username: user.username,
+      # first_name: user.first_name,
+      # last_name: user.last_name,
+      # address: user.address,
+      # city: user.city,
+      # zipcode: user.zipcode,
+      # trucks: format_truck_data(user_address)
+      # })
   # end
 
   # def self.format_truck_data(user_address)

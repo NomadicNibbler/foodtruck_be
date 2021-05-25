@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<COORD_KEY>&location=1724%20hillcrest%20dr%20lander
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<COORD_KEY>&location=898%20W%20Broadway%20Vancouver%20V5Z%201J8
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.4.1
+      - Faraday v1.4.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 22 May 2021 15:24:56 GMT
+      - Mon, 24 May 2021 22:01:28 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1088'
+      - '1103'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,7 +35,7 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Sat, 22 May 2021 15:24:56 GMT
+      - Mon, 24 May 2021 22:01:28 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
@@ -43,7 +43,7 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       Set-Cookie:
-      - JSESSIONID=D93401C4A6CFE3397DF855F7765E06E0; Path=/; HttpOnly
+      - JSESSIONID=C7B7E86B02D31BABE172CA6161E9B37A; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -52,7 +52,9 @@ http_interactions:
       encoding: UTF-8
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"1724
-        hillcrest dr lander"},"locations":[{"street":"1724 Hillcrest Dr","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Lander","adminArea5Type":"City","adminArea4":"Fremont","adminArea4Type":"County","adminArea3":"WY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"82520-9775","geocodeQualityCode":"P1ABA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"R","linkId":"r47572859|p194470568|n64885584","unknownInput":"","type":"s","latLng":{"lat":42.81634,"lng":-108.738032},"displayLatLng":{"lat":42.816136,"lng":-108.737627},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=42.81634,-108.738032|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-816576939"}]}]}'
-  recorded_at: Sat, 22 May 2021 15:24:56 GMT
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"898
+        W Broadway Vancouver V5Z 1J8"},"locations":[{"street":"898 W Broadway","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Vancouver","adminArea5Type":"City","adminArea4":"Greater
+        Vancouver","adminArea4Type":"County","adminArea3":"BC","adminArea3Type":"State","adminArea1":"CA","adminArea1Type":"Country","postalCode":"V5Z
+        1J8","geocodeQualityCode":"P1ABA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r46355279|p204240215|n63201388","unknownInput":"","type":"s","latLng":{"lat":49.263345,"lng":-123.123713},"displayLatLng":{"lat":49.263169,"lng":-123.123715},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=49.263345,-123.123713|marker-sm-50318A-1&scalebar=true&zoom=15&rand=69968948"}]}]}'
+  recorded_at: Mon, 24 May 2021 22:01:28 GMT
 recorded_with: VCR 6.0.0

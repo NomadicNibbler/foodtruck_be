@@ -19,7 +19,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 25 May 2021 21:41:22 GMT
+      - Tue, 25 May 2021 21:17:11 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Location:
@@ -38,7 +38,7 @@ http_interactions:
         <h1>Moved Permanently</h1>
         <p>The document has moved <a href="http://data.streetfoodapp.com/1.1/schedule/vancouver/">here</a>.</p>
         </body></html>
-  recorded_at: Tue, 25 May 2021 21:40:51 GMT
+  recorded_at: Tue, 25 May 2021 21:16:40 GMT
 - request:
     method: get
     uri: http://data.streetfoodapp.com/1.1/schedule/vancouver/
@@ -58,26 +58,25 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 25 May 2021 21:41:22 GMT
+      - Tue, 25 May 2021 21:17:11 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Last-Modified:
-      - Tue, 25 May 2021 21:41:20 GMT
+      - Tue, 25 May 2021 21:16:21 GMT
       Etag:
-      - '"223a8-5c32e6307f8a0"'
+      - '"223ed-5c32e09a2e680"'
       Accept-Ranges:
       - bytes
       Content-Length:
-      - '140200'
+      - '140269'
       Cache-Control:
       - max-age=300
       Content-Type:
       - text/html; charset=UTF-8
     body:
       encoding: UTF-8
-      string: '{"metadata":{"ads":[{"banner":{"identifier":"red-truck-food-truck","image_url":"https:\/\/cdn.streetfoodapp.com\/images\/red-truck-food-truck\/logo\/90w_square.png","image_url_2x":"https:\/\/cdn.streetfoodapp.com\/images\/red-truck-food-truck\/logo\/90w_square@2x.png","title":"Red
-        Truck Food Truck","subtitle":"The RedTruckFT brings delicious comfort food
-        to Vancouver. We can cater your next event with our food & beer truck!","show_vendor":"red-truck-food-truck"}}],"new":["the-brownie-bakers","bistrotvan","crack-on","babas-house","invito-coffee","little-devils","wingerz","crema-ice-cream","street-dogs-smash-burgers","rice-soup"],"regions":[{"identifier":"vancouver","name":"Vancouver","time_zone":"America\/Vancouver","example_location":[],"regions":[{"identifier":"armoury-district","name":"Armoury
+      string: '{"metadata":{"ads":[{"banner":{"identifier":"arturos-to-go","image_url":"https:\/\/cdn.streetfoodapp.com\/images\/arturos-to-go\/logo\/1.90w.png","image_url_2x":"https:\/\/cdn.streetfoodapp.com\/images\/arturos-to-go\/logo\/1.90w@2x.png","title":"arturosmexico2go","subtitle":"Authentic,
+        author gourmet Mexican made with the finest ingredients hand picked.","show_vendor":"arturos-to-go"}}],"new":["the-brownie-bakers","bistrotvan","crack-on","babas-house","invito-coffee","little-devils","wingerz","crema-ice-cream","street-dogs-smash-burgers","rice-soup"],"regions":[{"identifier":"vancouver","name":"Vancouver","time_zone":"America\/Vancouver","example_location":[],"regions":[{"identifier":"armoury-district","name":"Armoury
         District","time_zone":"America\/Vancouver"},{"identifier":"btc","name":"Broadway
         Tech Centre","time_zone":"America\/Vancouver"},{"identifier":"cityhall","name":"City
         Hall","time_zone":"America\/Vancouver"},{"identifier":"commercial","name":"Commercial
@@ -330,18 +329,19 @@ http_interactions:
         Broadway & Granville St.","latitude":49.26349539,"longitude":-123.138811},"catering":null,"open":[],"open_updated":null,"rank":109},"indish":{"description_short":null,"identifier":"indish","name":"Indish","region":"vancouver","url":"indishfoods.ca","phone":null,"email":"indishfoodsinc@gmail.com","twitter":"indishfoodtruck","facebook":null,"instagram":"indishfoodtruck","takeout_url":null,"delivery_url":null,"description":"Indian
         inspired food served with a modern flair. Rice bowls, paratha wraps, poutine,
         samosas, and other mouthwatering street food specials!","rating":92,"payment_methods":["cash","credit_card","debit_card"],"promoted":false,"last":{"time":1621963800,"display":"Louis
-        Brier Home & Hospital","latitude":49.23448726,"longitude":-123.12925651},"catering":null,"open":[{"start":1622052900,"end":1622063700,"display":"Lush
+        Brier Home & Hospital","latitude":49.23448726,"longitude":-123.12925651},"catering":null,"open":[{"start":1621963800,"end":1621978200,"display":"Louis
+        Brier Home & Hospital","updated":1621235428,"latitude":49.23448726,"longitude":-123.12925651},{"start":1622052900,"end":1622063700,"display":"Lush
         HQ","updated":1621235465,"latitude":49.20725113,"longitude":-123.11655966},{"start":1622304000,"end":1622322000,"display":"Trout
         Lake Farmer''s Market","updated":1619817350,"latitude":49.25800572,"longitude":-123.06175435}],"open_updated":1621235465,"rank":72},"invito-coffee":{"description_short":null,"identifier":"invito-coffee","name":"Invito
         Coffee","region":"vancouver","url":"invitocoffee.com","phone":"(778) 994-4974","email":"yaroslav@invitocoffee.com","twitter":"InvitoCoffee","facebook":null,"instagram":null,"takeout_url":null,"delivery_url":null,"description":"We''re
         Vancouver''s first zero-waste coffee company featuring coffee from our family
         plantation in Costa Rica. We roast our coffee locally and all packaging is
-        compostable. Find our mobile coffee cart at various events and farmers markets.","rating":10,"payment_methods":null,"promoted":false,"last":{"time":1621785600,"display":"Coquitlam
+        compostable. Find our mobile coffee cart at various events and farmers markets.","rating":9,"payment_methods":null,"promoted":false,"last":{"time":1621785600,"display":"Coquitlam
         Farmers Market, 624 Poirier St, Coquitlam, BC","latitude":49.2536883,"longitude":-122.84486465},"catering":null,"open":[{"start":1622307600,"end":1622322000,"display":"Loutet
         Park, 1552\u20131598 Rufus Ave, North Vancouver, BC","updated":1621615244,"latitude":49.32254598,"longitude":-123.04598834,"special":"NITRO
         Cold Brew"},{"start":1622394000,"end":1622412000,"display":"Clayton Community
         Farmer''s Market, 7003 188 St, Surrey, BC","updated":1621615457,"latitude":49.12920653,"longitude":-122.70185763,"special":"NITRO
-        Cold Brew"}],"open_updated":1621615457,"rank":119},"japa-dog-1":{"description_short":null,"identifier":"japa-dog-1","name":"JAPADOG","region":"vancouver","url":"japadog.com","phone":null,"email":"info@japadog.com","twitter":"japadog","facebook":null,"instagram":null,"takeout_url":null,"delivery_url":null,"description":"Vancouver''s
+        Cold Brew"}],"open_updated":1621615457,"rank":120},"japa-dog-1":{"description_short":null,"identifier":"japa-dog-1","name":"JAPADOG","region":"vancouver","url":"japadog.com","phone":null,"email":"info@japadog.com","twitter":"japadog","facebook":null,"instagram":null,"takeout_url":null,"delivery_url":null,"description":"Vancouver''s
         famous Japanese-style hot dog stand, serving Terimayo, Oroshi and Okonomi
         hot dogs & more.","rating":2622,"payment_methods":["credit_card","debit_card"],"promoted":false,"last":{"time":1621965600,"display":"Burrard
         St & Smithe St","latitude":49.28243991,"longitude":-123.12439424},"catering":null,"open":[{"start":1621965600,"end":1622005200,"display":"Burrard
@@ -894,5 +894,1065 @@ http_interactions:
         NW Marine Dr, Vancouver","updated":1621744299,"latitude":49.27453474,"longitude":-123.20811728},{"start":1622397600,"end":1622426400,"display":"4486
         NW Marine Dr, Vancouver, BC V6R 1B6 \u30ab\u30ca\u30c0","updated":1621955358,"latitude":49.27453286,"longitude":-123.208165},{"start":1622487600,"end":1622512800,"display":"2200
         W 41st Ave, Vancouver","updated":1621955399,"latitude":49.23453928,"longitude":-123.15875761}],"open_updated":1621965600,"rank":37}}}'
-  recorded_at: Tue, 25 May 2021 21:40:51 GMT
+  recorded_at: Tue, 25 May 2021 21:16:40 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=49.2864661,-123.113481%7C49.69994555,-123.15221197%7C49.27886813,-122.84993495%7C49.26417329,-123.09393872%7C49.27132919,-123.10942297%7C49.17857616,-122.78028753%7C49.27650777,-123.21323457%7C49.27149749,-123.10957127%7C49.1634374,-122.96999053%7C49.70012139,-123.15214401%7C49.2682247,-123.15516618%7C49.26269174,-123.16155208%7C49.26164995,-123.1619584%7C49.28185146,-123.07869564%7C49.27865786,-122.84869889%7C49.32604495,-123.15103622%7C49.25536793,-123.065479%7C49.2637766,-123.13261084%7C49.27854708,-122.85101473%7C49.26232943,-123.16152156&key=<GOOGLE_MAPS_API_KEY>&origins=49.2797,-123.11556&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 25 May 2021 21:16:40 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Vancouver
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=110
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "destination_addresses" : [
+              "777 W Cordova St, Vancouver, BC V6C 3S1, Canada",
+              "38090 Cleveland Ave, Squamish, BC V8B 0C3, Canada",
+              "2799 Murray St, Port Moody, BC V3H 3R5, Canada",
+              "2300 Guelph St, Vancouver, BC V5T 3P1, Canada",
+              "127 E Columbia St, Vancouver, BC V3L 3V7, Canada",
+              "15945 96 Ave, Surrey, BC V4N 2R8, Canada",
+              "4707 NW Marine Dr, Vancouver, BC V6R 1B7, Canada",
+              "1610 Columbia St, Vancouver, BC V5Y 0E5, Canada",
+              "1608 Cliveden Ave, Delta, BC V3M 6P1, Canada",
+              "Cleveland at Winnipeg (NB), Squamish, BC V8B, Canada",
+              "1979 Yew St, Vancouver, BC V6K 4R9, Canada",
+              "2463 W 10th Ave, Vancouver, BC V6K 2J3, Canada",
+              "2690 Larch St, Vancouver, BC V6K 4K9, Canada",
+              "1212 Franklin St, Vancouver, BC V6A 1K1, Canada",
+              "2817 Murray St, Port Moody, BC V3H 1X3, Canada",
+              "1031 Argyle Ave, West Vancouver, BC V7T, Canada",
+              "3360 Victoria Dr, Vancouver, BC V5N 4M4, Canada",
+              "103-1245 W Broadway, Vancouver, BC V6H 1G7, Canada",
+              "2731 Murray St, Port Moody, BC V3H 1X1, Canada",
+              "2690 Larch St, Vancouver, BC V6K 4K9, Canada"
+           ],
+           "origin_addresses" : [ "775 Hamilton St, Vancouver, BC V6B 6B3, Canada" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "0.7 mi",
+                          "value" : 1103
+                       },
+                       "duration" : {
+                          "text" : "5 mins",
+                          "value" : 284
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "40.1 mi",
+                          "value" : 64466
+                       },
+                       "duration" : {
+                          "text" : "56 mins",
+                          "value" : 3369
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.7 mi",
+                          "value" : 25245
+                       },
+                       "duration" : {
+                          "text" : "31 mins",
+                          "value" : 1884
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "1.9 mi",
+                          "value" : 3025
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 436
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "1.6 mi",
+                          "value" : 2607
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 419
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "19.5 mi",
+                          "value" : 31440
+                       },
+                       "duration" : {
+                          "text" : "29 mins",
+                          "value" : 1762
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "5.3 mi",
+                          "value" : 8595
+                       },
+                       "duration" : {
+                          "text" : "18 mins",
+                          "value" : 1097
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "1.6 mi",
+                          "value" : 2625
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 423
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.5 mi",
+                          "value" : 24968
+                       },
+                       "duration" : {
+                          "text" : "31 mins",
+                          "value" : 1876
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "40.0 mi",
+                          "value" : 64449
+                       },
+                       "duration" : {
+                          "text" : "56 mins",
+                          "value" : 3366
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.4 mi",
+                          "value" : 3791
+                       },
+                       "duration" : {
+                          "text" : "10 mins",
+                          "value" : 582
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "3.0 mi",
+                          "value" : 4812
+                       },
+                       "duration" : {
+                          "text" : "12 mins",
+                          "value" : 748
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "3.2 mi",
+                          "value" : 5127
+                       },
+                       "duration" : {
+                          "text" : "12 mins",
+                          "value" : 721
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.1 mi",
+                          "value" : 3388
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 432
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.7 mi",
+                          "value" : 25335
+                       },
+                       "duration" : {
+                          "text" : "32 mins",
+                          "value" : 1897
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "5.5 mi",
+                          "value" : 8845
+                       },
+                       "duration" : {
+                          "text" : "16 mins",
+                          "value" : 975
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "3.6 mi",
+                          "value" : 5822
+                       },
+                       "duration" : {
+                          "text" : "12 mins",
+                          "value" : 715
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.0 mi",
+                          "value" : 3196
+                       },
+                       "duration" : {
+                          "text" : "8 mins",
+                          "value" : 488
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.6 mi",
+                          "value" : 25167
+                       },
+                       "duration" : {
+                          "text" : "31 mins",
+                          "value" : 1873
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "3.0 mi",
+                          "value" : 4852
+                       },
+                       "duration" : {
+                          "text" : "13 mins",
+                          "value" : 759
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Tue, 25 May 2021 21:16:40 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=49.26466141,-123.09917283%7C49.23314999,-123.11662618%7C49.26349539,-123.138811%7C49.23448726,-123.12925651%7C49.2536883,-122.84486465%7C49.28243991,-123.12439424%7C49.28893425,-122.79298926%7C49.20651025,-123.03072177%7C49.26423588,-123.10811617%7C49.26321517,-123.1179451%7C49.20593917,-123.03086374%7C49.02174757,-122.80739973%7C49.27388502,-123.12148456%7C49.27866264,-122.84884859%7C49.25712235,-123.10614051%7C49.20974149,-123.09082576%7C49.26353854,-123.13373144%7C49.09927309,-122.49492319%7C49.31739079,-123.088293%7C49.23150167,-123.09065944&key=<GOOGLE_MAPS_API_KEY>&origins=49.2797,-123.11556&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 25 May 2021 21:16:40 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Vancouver
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=92
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "destination_addresses" : [
+              "263 E 7th Ave, Vancouver, BC V5T 0B4, Canada",
+              "Oakridge-41st Avenue, Vancouver, BC V5Z 4H2, Canada",
+              "2505 BC-99, Vancouver, BC V6H 3G7, Canada",
+              "1055 W 41st Ave, Vancouver, BC V6M 1W9, Canada",
+              "575 Poirier St, Coquitlam, BC V3J 6A9, Canada",
+              "855 Burrard St, Vancouver, BC V6Z 2K6, Canada",
+              "1250 Pinetree Way, Coquitlam, BC V3B 7X3, Canada",
+              "8502 River District Crossing, Vancouver, BC V5S 0E2, Canada",
+              "Jonathan Rogers Park, 110 W 7th Ave, Vancouver, BC V5Y 1L7, Canada",
+              "604 W Broadway, Vancouver, BC V5Z 1G2, Canada",
+              "3505 Preston Ave, Vancouver, BC V5S 4P8, Canada",
+              "14970 Marine Dr, White Rock, BC V4B 1B7, Canada",
+              "1200 Pacific Blvd, Vancouver, BC V6Z 2Y1, Canada",
+              "2813 Murray St, Port Moody, BC V3H 1X3, Canada",
+              "3151 Ontario St, Vancouver, BC V5T 2Y9, Canada",
+              "8248 Fraser St, Vancouver, BC V5X 3X6, Canada",
+              "1285w W Broadway, Vancouver, BC V6H 3X8, Canada",
+              "26350 56 Ave, Langley City, BC V4W 1J7, Canada",
+              "442 W 1st St, North Vancouver, BC V7M 1C2, Canada",
+              "5848 Fraser St, Vancouver, BC V5W 2Z5, Canada"
+           ],
+           "origin_addresses" : [ "775 Hamilton St, Vancouver, BC V6B 6B3, Canada" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "1.7 mi",
+                          "value" : 2769
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 408
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "3.4 mi",
+                          "value" : 5491
+                       },
+                       "duration" : {
+                          "text" : "13 mins",
+                          "value" : 750
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.1 mi",
+                          "value" : 3367
+                       },
+                       "duration" : {
+                          "text" : "8 mins",
+                          "value" : 506
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "3.9 mi",
+                          "value" : 6299
+                       },
+                       "duration" : {
+                          "text" : "14 mins",
+                          "value" : 811
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.3 mi",
+                          "value" : 24623
+                       },
+                       "duration" : {
+                          "text" : "29 mins",
+                          "value" : 1758
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "0.6 mi",
+                          "value" : 984
+                       },
+                       "duration" : {
+                          "text" : "4 mins",
+                          "value" : 243
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "19.7 mi",
+                          "value" : 31690
+                       },
+                       "duration" : {
+                          "text" : "34 mins",
+                          "value" : 2046
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "7.5 mi",
+                          "value" : 12073
+                       },
+                       "duration" : {
+                          "text" : "24 mins",
+                          "value" : 1444
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "1.5 mi",
+                          "value" : 2427
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 413
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "1.4 mi",
+                          "value" : 2234
+                       },
+                       "duration" : {
+                          "text" : "6 mins",
+                          "value" : 342
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "7.5 mi",
+                          "value" : 12103
+                       },
+                       "duration" : {
+                          "text" : "25 mins",
+                          "value" : 1474
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "29.3 mi",
+                          "value" : 47180
+                       },
+                       "duration" : {
+                          "text" : "49 mins",
+                          "value" : 2934
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "0.9 mi",
+                          "value" : 1505
+                       },
+                       "duration" : {
+                          "text" : "6 mins",
+                          "value" : 368
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.7 mi",
+                          "value" : 25324
+                       },
+                       "duration" : {
+                          "text" : "32 mins",
+                          "value" : 1895
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.1 mi",
+                          "value" : 3384
+                       },
+                       "duration" : {
+                          "text" : "8 mins",
+                          "value" : 490
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "5.6 mi",
+                          "value" : 9050
+                       },
+                       "duration" : {
+                          "text" : "19 mins",
+                          "value" : 1134
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.1 mi",
+                          "value" : 3381
+                       },
+                       "duration" : {
+                          "text" : "9 mins",
+                          "value" : 512
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "33.4 mi",
+                          "value" : 53709
+                       },
+                       "duration" : {
+                          "text" : "42 mins",
+                          "value" : 2517
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "6.0 mi",
+                          "value" : 9718
+                       },
+                       "duration" : {
+                          "text" : "19 mins",
+                          "value" : 1153
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "4.1 mi",
+                          "value" : 6632
+                       },
+                       "duration" : {
+                          "text" : "14 mins",
+                          "value" : 836
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Tue, 25 May 2021 21:16:40 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=49.17441484,-123.07073996%7C49.27865511,-122.84883671%7C49.24451217,-123.09003635%7C49.17859396,-122.7801698%7C49.20585932,-123.03072169%7C49.2638422,-123.10809469%7C49.26213629,-123.16025024%7C49.27679611,-123.07123185%7C49.28616836,-123.14332854%7C49.26969999,-123.13534398%7C49.17855553,-122.78037061%7C49.2786078,-122.8543138%7C49.25669516,-123.10572688%7C49.27252699,-123.07783658%7C49.27253576,-123.07781109%7C49.27887315,-122.84737401%7C49.27857287,-122.85323458%7C49.24334402,-123.10490082%7C49.69995832,-123.15222979%7C49.25977085,-123.04421575&key=<GOOGLE_MAPS_API_KEY>&origins=49.2797,-123.11556&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 25 May 2021 21:16:40 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Vancouver
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=97
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "destination_addresses" : [
+              "Unnamed Road, Richmond, BC V6V 2Z8, Canada",
+              "2813 Murray St, Port Moody, BC V3H 1X3, Canada",
+              "4510 Fraser St, Vancouver, BC V5V 4G7, Canada",
+              "15945 96 Ave, Surrey, BC V4N 2R8, Canada",
+              "3505 Preston Ave, Vancouver, BC V5S 4P8, Canada",
+              "128 W 8th Ave, Vancouver, BC V5Y 1N2, Canada",
+              "Connaught Park, 2390 W 10th Ave, Vancouver, BC V6K 4K9, Canada",
+              "1675 Venables St, Vancouver, BC V5L 2H1, Canada",
+              "1750 Beach Ave, Vancouver, BC V6G 0A8, Canada",
+              "1540 Old Bridge St, Vancouver, BC V6H 3S6, Canada",
+              "15945 96 Ave, Surrey, BC V4N 2R8, Canada",
+              "2601 Murray St, Port Moody, BC V3H 1X1, Canada",
+              "40 W 16th Ave, Vancouver, BC V5Y 1Y6, Canada",
+              "1345 Clark Dr, Vancouver, BC V5L 3K9, Canada",
+              "1345 Clark Dr, Vancouver, BC V5L 3K9, Canada",
+              "2906 Murray St, Port Moody, BC V3H 1X2, Canada",
+              "2617 Murray St, Port Moody, BC V3H 1X1, Canada",
+              "4600 Ontario St, Vancouver, BC V5V 3H5, Canada",
+              "38090 Cleveland Ave, Squamish, BC V8B 0C3, Canada",
+              "2905 Hebb Ave, Vancouver, BC V5M 3M4, Canada"
+           ],
+           "origin_addresses" : [ "775 Hamilton St, Vancouver, BC V6B 6B3, Canada" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "9.3 mi",
+                          "value" : 15029
+                       },
+                       "duration" : {
+                          "text" : "25 mins",
+                          "value" : 1479
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.7 mi",
+                          "value" : 25325
+                       },
+                       "duration" : {
+                          "text" : "32 mins",
+                          "value" : 1895
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "3.2 mi",
+                          "value" : 5178
+                       },
+                       "duration" : {
+                          "text" : "11 mins",
+                          "value" : 682
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "19.5 mi",
+                          "value" : 31432
+                       },
+                       "duration" : {
+                          "text" : "29 mins",
+                          "value" : 1759
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "7.5 mi",
+                          "value" : 12114
+                       },
+                       "duration" : {
+                          "text" : "25 mins",
+                          "value" : 1478
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "1.5 mi",
+                          "value" : 2430
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 414
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.9 mi",
+                          "value" : 4690
+                       },
+                       "duration" : {
+                          "text" : "12 mins",
+                          "value" : 720
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.1 mi",
+                          "value" : 3329
+                       },
+                       "duration" : {
+                          "text" : "6 mins",
+                          "value" : 360
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "1.9 mi",
+                          "value" : 3102
+                       },
+                       "duration" : {
+                          "text" : "10 mins",
+                          "value" : 589
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.4 mi",
+                          "value" : 3871
+                       },
+                       "duration" : {
+                          "text" : "9 mins",
+                          "value" : 539
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "19.5 mi",
+                          "value" : 31446
+                       },
+                       "duration" : {
+                          "text" : "29 mins",
+                          "value" : 1764
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.8 mi",
+                          "value" : 25393
+                       },
+                       "duration" : {
+                          "text" : "32 mins",
+                          "value" : 1904
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.1 mi",
+                          "value" : 3416
+                       },
+                       "duration" : {
+                          "text" : "8 mins",
+                          "value" : 493
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.1 mi",
+                          "value" : 3364
+                       },
+                       "duration" : {
+                          "text" : "6 mins",
+                          "value" : 349
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "2.1 mi",
+                          "value" : 3363
+                       },
+                       "duration" : {
+                          "text" : "6 mins",
+                          "value" : 349
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.8 mi",
+                          "value" : 25431
+                       },
+                       "duration" : {
+                          "text" : "32 mins",
+                          "value" : 1908
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "15.7 mi",
+                          "value" : 25330
+                       },
+                       "duration" : {
+                          "text" : "32 mins",
+                          "value" : 1915
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "3.1 mi",
+                          "value" : 4931
+                       },
+                       "duration" : {
+                          "text" : "13 mins",
+                          "value" : 770
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "40.1 mi",
+                          "value" : 64466
+                       },
+                       "duration" : {
+                          "text" : "56 mins",
+                          "value" : 3369
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "4.3 mi",
+                          "value" : 6873
+                       },
+                       "duration" : {
+                          "text" : "13 mins",
+                          "value" : 782
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Tue, 25 May 2021 21:16:40 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=49.25472922,-123.12146339%7C49.73903605,-123.13362298%7C49.22044761,-122.59034468%7C49.28458375,-122.79204987%7C49.28677363,-123.11771223%7C49.08943695,-122.06629335%7C49.27140269,-123.10660322%7C49.23453928,-123.15875761&key=<GOOGLE_MAPS_API_KEY>&origins=49.2797,-123.11556&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 25 May 2021 21:16:41 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Vary:
+      - Accept-Language
+      X-Goog-Maps-Metro-Area:
+      - Vancouver
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server-Timing:
+      - gfet4t7; dur=104
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "destination_addresses" : [
+              "Heather Park, 702 W 18th Ave, Vancouver, BC V5Z 1W1, Canada",
+              "1870 Diamond Rd, Squamish, BC V8B 0M3, Canada",
+              "Dewdney Trunk Rd FS 228 St, Maple Ridge, BC V2X, Canada",
+              "Lafarge Lake-Douglas Station, Coquitlam, BC V3B 7Y3, Canada",
+              "WB W Pender St @ Burrard St, Vancouver, BC V6C 3S4, Canada",
+              "Fishermans Corner, 41851 No. 3 Rd, Chilliwack, BC V2R 5E9, Canada",
+              "1625 Manitoba St, Vancouver, BC V5Y 0B5, Canada",
+              "2200 W 41st Ave, Vancouver, BC V6M 1Z8, Canada"
+           ],
+           "origin_addresses" : [ "775 Hamilton St, Vancouver, BC V6B 6B3, Canada" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "2.2 mi",
+                          "value" : 3501
+                       },
+                       "duration" : {
+                          "text" : "9 mins",
+                          "value" : 558
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "42.3 mi",
+                          "value" : 68117
+                       },
+                       "duration" : {
+                          "text" : "1 hour 0 mins",
+                          "value" : 3588
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "27.1 mi",
+                          "value" : 43593
+                       },
+                       "duration" : {
+                          "text" : "45 mins",
+                          "value" : 2696
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "19.4 mi",
+                          "value" : 31202
+                       },
+                       "duration" : {
+                          "text" : "33 mins",
+                          "value" : 1950
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "0.7 mi",
+                          "value" : 1154
+                       },
+                       "duration" : {
+                          "text" : "4 mins",
+                          "value" : 228
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "55.0 mi",
+                          "value" : 88592
+                       },
+                       "duration" : {
+                          "text" : "1 hour 3 mins",
+                          "value" : 3774
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "1.6 mi",
+                          "value" : 2543
+                       },
+                       "duration" : {
+                          "text" : "7 mins",
+                          "value" : 408
+                       },
+                       "status" : "OK"
+                    },
+                    {
+                       "distance" : {
+                          "text" : "4.8 mi",
+                          "value" : 7785
+                       },
+                       "duration" : {
+                          "text" : "17 mins",
+                          "value" : 1010
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+  recorded_at: Tue, 25 May 2021 21:16:41 GMT
 recorded_with: VCR 6.0.0
