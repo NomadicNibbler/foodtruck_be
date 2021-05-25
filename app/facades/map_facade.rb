@@ -10,7 +10,10 @@ class MapFacade
   end
 
   def self.address_to_lat_long(address)
-    MapService.get_coords(address)
+    require "pry"; binding.pry
+    Rails.cache.fetch "address: #{address}", expires_in: 1.week do
+      MapService.get_coords(address)
+    end
   end
 
   def self.find_closest_region(user_location)
@@ -109,17 +112,17 @@ class MapFacade
   end
 
   # def self.return_data(user)
-  #   user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
-  #   x = OpenStruct.new({
-  #     id: nil,
-  #     username: user.username,
-  #     first_name: user.first_name,
-  #     last_name: user.last_name,
-  #     address: user.address,
-  #     city: user.city,
-  #     zipcode: user.zipcode,
-  #     trucks: format_truck_data(user_address)
-  #     })
+    # user_address = "#{user.address}, #{user.city}, #{user.zipcode}"
+    # x = OpenStruct.new({
+      # id: nil,
+      # username: user.username,
+      # first_name: user.first_name,
+      # last_name: user.last_name,
+      # address: user.address,
+      # city: user.city,
+      # zipcode: user.zipcode,
+      # trucks: format_truck_data(user_address)
+      # })
   # end
 
   # def self.format_truck_data(user_address)
