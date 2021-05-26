@@ -115,4 +115,12 @@ RSpec.describe "map_facade_spec" do
       expect(distance).to eq(879.5600873672587)
     end
   end
+  describe 'sad path', :vcr do
+    it 'returns empty array when no nearby trucks' do
+      address = '8808 burton rd, wonder lake, 60097'
+      response = MapFacade.get_trucks(address)
+
+      expect(response).to eq([])
+    end
+  end
 end

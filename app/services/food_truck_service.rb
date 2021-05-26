@@ -5,7 +5,11 @@ class FoodTruckService
 
   def self.get_schedules_by_city(region_identifier)
     response = connection.get("/1.1/schedule/#{region_identifier}")
-    results = parse(response)[:vendors]
+    if response.headers["content-type"][0..8] == "text/html"
+      return []
+    else
+      results = parse(response)[:vendors]
+    end
   end
 
   # def self.get_truck_info(truck_identifier)
