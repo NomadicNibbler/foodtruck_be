@@ -9,11 +9,19 @@ class User < ApplicationRecord
 
   def latitude
     coords = MapService.get_coords("#{address}, #{city}, #{zipcode}")
-    coords[:lat]
+    if coords == 'location not found'
+      return 'invalid location'
+    else
+      coords[:lat]
+    end
   end
 
   def longitude
     coords = MapService.get_coords("#{address}, #{city}, #{zipcode}")
-    coords[:lng]
+    if coords == 'location not found'
+      return 'invalid location'
+    else
+      coords[:lng]
+    end
   end
 end
