@@ -45,8 +45,10 @@ class MapFacade
 
   def self.regions
     regions = parse(FoodTruckService.get_regions)
-
-    regions.map do |region_data|
+    filtered_regions = regions.reject do |region|
+      region[:name] == "Rochester"
+    end
+    filtered_regions.map do |region_data|
       Region.new(region_data)
     end
   end

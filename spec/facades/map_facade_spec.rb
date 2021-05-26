@@ -40,7 +40,7 @@ RSpec.describe "map_facade_spec" do
       region_objects = MapFacade.regions
 
       expect(region_objects).to be_an(Array)
-      expect(region_objects.count).to eq(77)
+      expect(region_objects.count).to eq(76)
       expect(region_objects.first.name).to eq("Abbotsford")
     end
 
@@ -113,6 +113,14 @@ RSpec.describe "map_facade_spec" do
 
       distance = MapFacade.get_distance(truck_location, user_location)
       expect(distance).to eq(879.5600873672587)
+    end
+  end
+  describe 'sad path', :vcr do
+    it 'returns empty array when no nearby trucks' do
+      address = '8808 burton rd, wonder lake, 60097'
+      response = MapFacade.get_trucks(address)
+
+      expect(response).to eq([])
     end
   end
 end
