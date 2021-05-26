@@ -44,7 +44,7 @@ RSpec.describe "Food_truck_service_api" do
       region_identifier = 'rochester'
       trucks = FoodTruckService.get_schedules_by_city(region_identifier)
 
-      expect(trucks). to eq("no nearby trucks")
+      expect(trucks). to eq([])
     end
   #   xit "returns a 404 for integers" do
   #     trucks = FoodTruckService.get_schedules_by_city("2345")
