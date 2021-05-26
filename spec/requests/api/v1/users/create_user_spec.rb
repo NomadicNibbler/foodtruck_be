@@ -35,6 +35,24 @@ describe "Users API" do
     expect(user[:data][:attributes][:lat]).to eq(coords[:lat])
     expect(user[:data][:attributes][:long]).to eq(coords[:lng])
   end
+  it "can create a new user - happy path debug" do
+    user_params = {
+                    username: 'samsonite',
+                    first_name: 'asdgas',
+                    last_name: 'asdgas',
+                    address: 'asdga',
+                    city: 'asdgad',
+                    zipcode: '12345'
+                    }
+    full_address = "#{user_params[:address]}, #{user_params[:city]}, #{user_params[:zipcode]}"
+    coords = MapService.get_coords(full_address)
+    post "/api/v1/users", params: user_params
+    user = JSON.parse(response.body, symbolize_names: true)
+    expect(response).to be_successful
+    expect(response.status).to eq(201)
+    expect(user[:data][:attributes][:lat]).to eq('invalid location')
+    expect(user[:data][:attributes][:long]).to eq('invalid location')
+  end
 
   it "can create a new user - sad path - no username" do
     user_params = {
