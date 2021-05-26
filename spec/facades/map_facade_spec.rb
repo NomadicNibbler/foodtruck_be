@@ -40,7 +40,7 @@ RSpec.describe "map_facade_spec" do
       region_objects = MapFacade.regions
 
       expect(region_objects).to be_an(Array)
-      expect(region_objects.count).to eq(77)
+      expect(region_objects.count).to eq(76)
       expect(region_objects.first.name).to eq("Abbotsford")
     end
 

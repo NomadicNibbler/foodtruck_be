@@ -28,6 +28,23 @@ RSpec.describe 'trucks index spec' do
       expect(trucks[:data][0][:attributes].keys).to eq([:lat, :long, :name, :distance, :logo, :payment_methods, :website, :socials, :phone, :description, :display, :description_short])
     end
   end
+  it "can avoid rochester - return an empty array when no trucks in closest region", :vcr do
+    user_params = {
+                    username: 'w-test-1',
+                    first_name: 'Tommy',
+                    last_name: 'Pickles',
+                    address: '8808 Burton Rd',
+                    city: 'Wonder Lake',
+                    zipcode: '60097'
+                    }
+    user = User.create!(user_params)
+    get "/api/v1/trucks?id=#{user.id}"
+    trucks = JSON.parse(response.body, symbolize_names: true)
+
+    expect(trucks).to be_a(Hash)
+    expect(trucks.keys).to eq([:data])
+    expect(trucks[:data]).to eq([])
+  end
   describe 'sad path' do
     it 'returns error json' do
       get "/api/v1/trucks?id=zip"
