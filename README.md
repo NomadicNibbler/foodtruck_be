@@ -1,11 +1,26 @@
-# iScreamTruck - Back End API
+# Nomadic Nibbler - Back End API
 
 ## About this Project
-This applicaiton exposes an API for serving content and geolocation radius information to the front end application.
+This application exposes an API for serving foodtruck information and geolocation radius information to the front end application.
+
+## Authors
+- **Kyle Schulz**
+|    [GitHub](https://github.com/kylejschulz) |
+[LinkedIn](https://www.linkedin.com/in/kyle-schulz-204056209/)
+
+- **Tommy Nieuwenhuis**
+|    [GitHub](https://github.com/tsnieuwen) |
+[LinkedIn](https://www.linkedin.com/in/thomasnieuwenhuis/)
+
+- **Wil McCauley**
+|    [GitHub](https://github.com/wil-mcc) |
+[LinkedIn](https://www.linkedin.com/in/wil-mccauley/)
 
 ## Acknowledgements
 
-API website here
+[Google Distance API](https://developers.google.com/maps/documentation/distance-matrix/overview)
+
+[Street Food App API](https://streetfoodapp.com/api)
 
 ## Table of Contents
 
@@ -14,56 +29,52 @@ API website here
 - [Built With](#built-with)
 - [Authors](#authors)
 
+### Prerequisites
+
+To run this application you will need Ruby 2.5.3 and Rails 5.2.5
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+To get the web application running:
 
-### Prerequisites
+1. Clone this repo
+```
+git@github.com:NomadicNibbler/foodtruck_be.git
+```
 
-Requirements for the software and other tools to build, test and push
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
+2. Install gem packages: `bundle install`
 
-### Installing
+3. Create and Migrate DB
+```
+$rails db:{create,migrate}
+```
+4. Install needed Figaro config
+```
+$bundle exec figaro install
+```
+5. Add environment variables to `config/application.yml`
 
-A step by step series of examples that tell you how to get a development
-environment running
+```
+COORD_URL: 'http://www.mapquestapi.com'
+COORD_KEY: 'your_mapquest_api_key'
 
-Say what the step will be
+GOOGLE_MAPS_API_KEY: 'your_google_api_key'
+```
 
-    Give the example
-
-And repeat
-
-    until finished
-
-End with an example of getting some data out of the system or using it
-for a little demo
+6. Start your server!
+```
+$ rails s
+```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+```
+bundle exec rspec
+```
 
 ## Deployment
 
 Add additional notes to deploy this on a live system
-
-## Authors
-- **Kyle Schulz**
-|    [GitHub](https://github.com/kylejschulz) |
-    [LinkedIn](https://www.linkedin.com/in/kyle-schulz-204056209/)
-
-- **Tommy Nieuwenhuis**
-|    [GitHub](https://github.com/tsnieuwen) |
-    [LinkedIn](https://www.linkedin.com/in/thomasnieuwenhuis/)
-
-- **Wil McCauley**
-|    [GitHub](https://github.com/wil-mcc) |
-    [LinkedIn](https://www.linkedin.com/in/wil-mccauley/)
-
 
 ## Acknowledgments
 
