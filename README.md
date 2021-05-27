@@ -1,7 +1,7 @@
 # Nomadic Nibbler - Back End API
 
 ## About this Project
-This application exposes an API for serving foodtruck information and geolocation radius information to the front end application.
+This application exposes an API for serving foodtruck information and geolocation radius information to an associated front end application.
 
 ## Authors
 - **Kyle Schulz**
@@ -18,9 +18,9 @@ This application exposes an API for serving foodtruck information and geolocatio
 
 ## Acknowledgements
 
-[Google Distance API](https://developers.google.com/maps/documentation/distance-matrix/overview)
-
-[Street Food App API](https://streetfoodapp.com/api)
+- [Google Distance API](https://developers.google.com/maps/documentation/distance-matrix/overview)
+- [MapQuest Geocode API](https://developer.mapquest.com/documentation/geocoding-api/)
+- [Street Food App API](https://streetfoodapp.com/api)
 
 ## Table of Contents
 
@@ -71,10 +71,6 @@ $ rails s
 ```
 bundle exec rspec
 ```
-
-## Deployment
-
-Add additional notes to deploy this on a live system
 
 ## Acknowledgments
 
