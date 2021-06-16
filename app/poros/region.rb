@@ -6,7 +6,7 @@ class Region
               :distance
 
   def initialize(data)
-    @name = data[:name]
+    @name = data[:identifier]
     @lat = data[:latitude]
     @long = data[:longitude]
     @country = data[:country]

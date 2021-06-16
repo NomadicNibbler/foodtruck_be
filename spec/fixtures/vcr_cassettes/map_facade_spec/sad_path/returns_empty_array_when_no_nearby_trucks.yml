@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<COORD_KEY>&location=8808%20burton%20rd,%20wonder%20lake,%2060097
+    uri: https://www.mapquestapi.com/geocoding/v1/address?key=<COORD_KEY>&location=8808%20burton%20rd,%20wonder%20lake,%2060097
     body:
       encoding: US-ASCII
       string: ''
@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 26 May 2021 18:12:14 GMT
+      - Thu, 27 May 2021 16:05:43 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1096'
+      - '1097'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,7 +35,7 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Wed, 26 May 2021 18:12:14 GMT
+      - Thu, 27 May 2021 16:05:43 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
@@ -43,19 +43,21 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       Set-Cookie:
-      - JSESSIONID=13DEA6C81DCB6668A7040609A44FEE56; Path=/; HttpOnly
+      - JSESSIONID=0969E90E678887605764B353DD89E17A; Path=/; HttpOnly; Secure
       Status:
       - success
       Transactionweight:
       - '1.0'
+      Strict-Transport-Security:
+      - max-age=0
     body:
       encoding: UTF-8
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"8808
         burton rd, wonder lake, 60097"},"locations":[{"street":"8808 Burton Rd","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Wonder
-        Lake","adminArea5Type":"City","adminArea4":"Mchenry","adminArea4Type":"County","adminArea3":"IL","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"60097-9433","geocodeQualityCode":"P1ABA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r17932673|p60240435|n23641267","unknownInput":"","type":"s","latLng":{"lat":42.38243,"lng":-88.369809},"displayLatLng":{"lat":42.382846,"lng":-88.369801},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=42.38243,-88.369809|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-508100474"}]}]}'
-  recorded_at: Wed, 26 May 2021 18:12:14 GMT
+        Lake","adminArea5Type":"City","adminArea4":"Mchenry","adminArea4Type":"County","adminArea3":"IL","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"60097-9433","geocodeQualityCode":"P1ABA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"L","linkId":"r17932673|p60240435|n23641267","unknownInput":"","type":"s","latLng":{"lat":42.38243,"lng":-88.369809},"displayLatLng":{"lat":42.382846,"lng":-88.369801},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=<COORD_KEY>&type=map&size=225,160&locations=42.38243,-88.369809|marker-sm-50318A-1&scalebar=true&zoom=15&rand=-1828264503"}]}]}'
+  recorded_at: Thu, 27 May 2021 16:05:43 GMT
 - request:
     method: get
     uri: http://data.streetfoodapp.com/1.1/regions
@@ -75,7 +77,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Wed, 26 May 2021 18:12:45 GMT
+      - Thu, 27 May 2021 16:06:15 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Location:
@@ -94,7 +96,7 @@ http_interactions:
         <h1>Moved Permanently</h1>
         <p>The document has moved <a href="http://data.streetfoodapp.com/1.1/regions/">here</a>.</p>
         </body></html>
-  recorded_at: Wed, 26 May 2021 18:12:14 GMT
+  recorded_at: Thu, 27 May 2021 16:05:43 GMT
 - request:
     method: get
     uri: http://data.streetfoodapp.com/1.1/regions/
@@ -114,13 +116,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 26 May 2021 18:12:45 GMT
+      - Thu, 27 May 2021 16:06:15 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Last-Modified:
-      - Wed, 26 May 2021 18:12:05 GMT
+      - Thu, 27 May 2021 16:06:05 GMT
       Etag:
-      - '"c31f-5c33f94800880"'
+      - '"c31f-5c351efbfb940"'
       Accept-Ranges:
       - bytes
       Content-Length:
@@ -367,7 +369,7 @@ http_interactions:
         MB","time_zone":"America\/Winnipeg","latitude":49.895136,"longitude":-97.1383744,"country":"ca","example_location":{"address":"Portage
         Ave & Main St","latitude":49.894534,"longitude":-97.142612},"regions":[]},{"identifier":"yarmouth","name":"Yarmouth","name_long":"Yarmouth,
         NS","time_zone":"Canada\/Atlantic","latitude":43.8374576,"longitude":-66.117382,"country":"ca","ios_app_bundle_identifier":"com.tatlowpark.streetfood.halifax","ios_app_application_id":846676460,"android_app_application_id":"com.tatlowpark.streetfood.halifax","android_app_url":"https:\/\/play.google.com\/store\/apps\/details?id=com.tatlowpark.streetfood.halifax","ios_app_url":"https:\/\/apps.apple.com\/app\/id846676460","regions":[]}]'
-  recorded_at: Wed, 26 May 2021 18:12:14 GMT
+  recorded_at: Thu, 27 May 2021 16:05:43 GMT
 - request:
     method: get
     uri: http://data.streetfoodapp.com/1.1/schedule/cincinnati
@@ -387,7 +389,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Wed, 26 May 2021 18:12:46 GMT
+      - Thu, 27 May 2021 16:06:16 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Location:
@@ -406,7 +408,7 @@ http_interactions:
         <h1>Moved Permanently</h1>
         <p>The document has moved <a href="http://data.streetfoodapp.com/1.1/schedule/cincinnati/">here</a>.</p>
         </body></html>
-  recorded_at: Wed, 26 May 2021 18:12:14 GMT
+  recorded_at: Thu, 27 May 2021 16:05:44 GMT
 - request:
     method: get
     uri: http://data.streetfoodapp.com/1.1/schedule/cincinnati/
@@ -426,13 +428,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 26 May 2021 18:12:46 GMT
+      - Thu, 27 May 2021 16:06:16 GMT
       Server:
       - Apache/2.4.46 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40
       Last-Modified:
-      - Wed, 26 May 2021 18:12:14 GMT
+      - Thu, 27 May 2021 16:06:15 GMT
       Etag:
-      - '"ac-5c33f950f7740"'
+      - '"ac-5c351f0509f00"'
       Accept-Ranges:
       - bytes
       Content-Length:
@@ -444,5 +446,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"metadata":{"ads":[],"new":[],"regions":[{"identifier":"cincinnati","name":"Cincinnati","time_zone":"America\/New_York","example_location":[],"regions":[]}]},"vendors":[]}'
-  recorded_at: Wed, 26 May 2021 18:12:14 GMT
+  recorded_at: Thu, 27 May 2021 16:05:44 GMT
 recorded_with: VCR 6.0.0
